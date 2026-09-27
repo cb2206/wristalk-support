@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wristalk — Privacy Policy</title>
+<meta name="description" content="How Wristalk handles your data: end-to-end encrypted voice, minimal data, no tracking.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f7f6" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Wristalk — Privacy Policy">
+<meta property="og:description" content="How Wristalk handles your data: end-to-end encrypted voice, minimal data, no tracking.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="alternate" hreflang="en" href="privacy.html">
+<link rel="alternate" hreflang="de" href="de/privacy.html">
+<!-- Site-wide values. The support address is generated from SUPPORT_EMAIL in _build/gen_pages.py (see README.md). -->
+<script>
+const SUPPORT_EMAIL = "hello@cbgroup.global";
+const APP_STORE_URL = "[APP STORE LINK]";
+</script>
+<script>
+(function(){
+  var t = null;
+  try { t = localStorage.getItem("wristalk_theme"); } catch (e) {}
+  if (t !== "light" && t !== "dark")
+    t = (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<style>
+  :root {
+    --bg: #f5f7f6; --surface: #ffffff; --surface-2: #eef3f1;
+    --heading: #0b0f0e; --body: #333d3a; --faint: #59625f;
+    --link: #0a7560; --accent: #0a7560; --mint: #5ad2b4; --orange: #b35c00; --orange-fill: #ff9f0a;
+    --line: rgba(11,15,14,0.10); --card-border: rgba(11,15,14,0.09);
+    --card-shadow: 0 1px 2px rgba(11,15,14,0.04), 0 8px 24px rgba(11,15,14,0.05);
+    --nav-bg: rgba(245,247,246,0.9);
+    --btn-bg: #0b0f0e; --btn-fg: #ffffff;
+    --chip-bg: rgba(10,117,96,0.08); --chip-border: rgba(10,117,96,0.22);
+    --hero-glow: radial-gradient(900px 480px at 80% -10%, rgba(90,210,180,0.30), transparent 65%);
+    --focus: #0a7560;
+  }
+  html[data-theme="dark"] {
+    --bg: #000000; --surface: #111413; --surface-2: #181c1b;
+    --heading: #ffffff; --body: #c8d0cd; --faint: #8e8e93;
+    --link: #5ad2b4; --accent: #5ad2b4; --mint: #5ad2b4; --orange: #ff9f0a; --orange-fill: #ff9f0a;
+    --line: rgba(255,255,255,0.10); --card-border: rgba(255,255,255,0.08);
+    --card-shadow: none;
+    --nav-bg: rgba(0,0,0,0.82);
+    --btn-bg: #ffffff; --btn-fg: #000000;
+    --chip-bg: rgba(90,210,180,0.10); --chip-border: rgba(90,210,180,0.28);
+    --hero-glow: radial-gradient(900px 480px at 80% -10%, rgba(90,210,180,0.22), transparent 65%);
+    --focus: #5ad2b4;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--body);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+  .skip { position: absolute; left: -9999px; top: 8px; background: var(--surface); padding: 8px 14px; z-index: 50; }
+  .skip:focus { left: 8px; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 20; display: flex; align-items: center;
+    justify-content: space-between; gap: 12px; padding: 12px 16px;
+    background: var(--nav-bg); border-bottom: 1px solid var(--line);
+    backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px;
+    letter-spacing: -0.3px; color: var(--heading); text-decoration: none; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; }
+  .navright { display: flex; align-items: center; gap: 6px; }
+  .navlinks { display: none; gap: 4px; margin-right: 6px; }
+  .navlinks a { font-weight: 600; font-size: 14px; text-decoration: none; padding: 6px 10px; border-radius: 999px; }
+  .navlinks a[aria-current="page"] { background: var(--chip-bg); }
+  .lang, .theme-btn {
+    font: inherit; font-size: 13px; font-weight: 700; color: var(--link); text-decoration: none;
+    background: var(--chip-bg); border: 1px solid var(--chip-border); border-radius: 999px;
+    min-height: 36px; display: inline-flex; align-items: center; justify-content: center;
+  }
+  .lang { padding: 0 12px; }
+  .theme-btn { width: 36px; padding: 0; cursor: pointer; font-size: 15px; }
+  @media (min-width: 720px) { .nav { padding: 12px 28px; } .navlinks { display: flex; } }
+
+  .hero { background: var(--hero-glow), var(--bg); border-bottom: 1px solid var(--line); }
+  .hero-inner { max-width: 1080px; margin: 0 auto; padding: 44px 16px 48px; }
+  .hero h1 { margin: 0 0 12px; color: var(--heading); font-size: 34px; line-height: 1.1;
+    letter-spacing: -1px; font-weight: 800; text-wrap: balance; }
+  .hero .subtitle { margin: 0; font-size: 17px; }
+  .page-hero .hero-inner { max-width: 760px; text-align: center; }
+  .page-hero .icon { width: 72px; height: 72px; border-radius: 17px; display: block; margin: 0 auto 16px; }
+
+  .home-hero .hero-inner { display: grid; gap: 36px; align-items: center; }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+  .home-hero h1 { font-size: 38px; }
+  .tagline { font-size: 18px; margin: 0 0 26px; max-width: 540px; }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+  .storebadge { display: inline-flex; align-items: center; gap: 10px; background: var(--btn-bg);
+    color: var(--btn-fg); border-radius: 12px; padding: 10px 18px; text-decoration: none; }
+  .storebadge svg { width: 24px; height: 24px; fill: var(--btn-fg); }
+  .storebadge .small { display: block; font-size: 11px; line-height: 1; opacity: 0.85; }
+  .storebadge .big { display: block; font-size: 18px; font-weight: 700; line-height: 1.2; }
+  .storebadge.soon { opacity: 0.8; cursor: default; }
+  .cta .textlink { font-weight: 700; }
+  .fineprint { font-size: 14px; color: var(--faint); margin: 16px 0 0; }
+
+  .watch { justify-self: center; width: 220px; height: 262px; border-radius: 58px; background: #000;
+    border: 9px solid #2a2d2c; box-shadow: 0 30px 60px rgba(0,0,0,0.35), inset 0 0 0 1px #3a3d3c;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    color: #fff; position: relative; }
+  .watch::after { content: ""; position: absolute; right: -16px; top: 70px; width: 8px; height: 38px;
+    border-radius: 4px; background: #2a2d2c; }
+  .watch .who { font-weight: 700; font-size: 17px; display: flex; align-items: center; gap: 7px; }
+  .watch .dot { width: 9px; height: 9px; border-radius: 50%; background: #5ad2b4; box-shadow: 0 0 10px #5ad2b4; }
+  .watch .ptt { width: 112px; height: 112px; border-radius: 50%; background: #5ad2b4;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 10px rgba(90,210,180,0.16), 0 0 0 22px rgba(90,210,180,0.07); }
+  .watch .ptt svg { width: 44px; height: 44px; fill: #000; }
+  .watch .hint { font-size: 12px; color: #8e8e93; font-weight: 600; }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 56px; }
+  main.narrow { max-width: 760px; }
+  .back { display: inline-block; margin-bottom: 20px; font-weight: 600; font-size: 14px; }
+
+  .band { font-size: 18px; color: var(--heading); text-align: center; max-width: 820px;
+    margin: 8px auto 36px; text-wrap: pretty; }
+  .features { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--card-border); border-radius: 20px;
+    padding: 22px 20px; box-shadow: var(--card-shadow); }
+  .feature h2 { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px; }
+  .feature ul { list-style: none; margin: 0; padding: 0; }
+  .feature li { position: relative; padding: 0 0 12px 22px; font-size: 15px; }
+  .feature li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px;
+    border-radius: 50%; background: var(--mint); }
+
+  .section-title { font-size: 26px; font-weight: 800; letter-spacing: -0.6px; color: var(--heading);
+    margin: 48px 0 16px; text-align: center; }
+  .tiers { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .tier h3 { margin: 0 0 6px; font-size: 16px; color: var(--heading); display: flex; align-items: center; gap: 8px; }
+  .tier p { margin: 0; font-size: 15px; }
+  .badge { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  .badge.live { background: var(--mint); }
+  .badge.notify { background: var(--orange-fill); }
+  .badge.off { background: #8e8e93; }
+  .tiers-note { text-align: center; font-size: 14px; color: var(--faint); margin: 14px 0 0; }
+
+  .helpbox { margin-top: 40px; text-align: center; }
+  .helpbox p { margin: 0 0 6px; }
+
+  .sec-h { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 12px; }
+  section.block { margin-bottom: 30px; }
+  .faq { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .faq:first-child { padding-top: 0; }
+  .faq:last-child { border-bottom: 0; padding-bottom: 0; }
+  .faq h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.35; color: var(--heading); }
+  .faq p, .faq li { font-size: 15px; }
+  .faq p { margin: 0 0 8px; }
+  .faq p:last-child { margin-bottom: 0; }
+  .faq ul { margin: 4px 0 8px; padding-left: 20px; }
+  .faq li { margin-bottom: 6px; }
+  .contact .email-big { font-weight: 800; font-size: 19px; word-break: break-all; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; padding: 0; list-style: none; }
+  .toc a { display: inline-block; font-size: 14px; font-weight: 600; text-decoration: none;
+    padding: 6px 12px; border-radius: 999px; background: var(--chip-bg); border: 1px solid var(--chip-border); }
+  .kbd { font-weight: 600; color: var(--heading); }
+
+  .legal h2 { font-size: 19px; color: var(--heading); margin: 28px 0 8px; line-height: 1.3; }
+  .legal h2:first-child { margin-top: 0; }
+  .legal h3 { font-size: 16px; color: var(--heading); margin: 18px 0 6px; }
+  .legal p { margin: 0 0 12px; }
+  .legal ul { margin: 0 0 12px; padding-left: 20px; }
+  .legal li { margin-bottom: 7px; }
+  .legal .summary { background: var(--surface-2); border-radius: 14px; padding: 14px 16px; margin: 0 0 20px; }
+  .legal .summary p:last-child, .legal .summary ul:last-child { margin-bottom: 0; }
+  .legal .caps { text-transform: none; }
+  .placeholder { background: rgba(255,159,10,0.18); border-radius: 4px; padding: 0 3px; }
+
+  footer { border-top: 1px solid var(--line); text-align: center; color: var(--faint);
+    font-size: 14px; padding: 28px 16px 48px; }
+  footer .links a { margin: 0 8px; font-weight: 600; display: inline-block; padding: 4px 0; }
+  footer .mail { display: inline-block; margin: 8px 0 10px; }
+  footer .copy { font-size: 13px; margin: 0; }
+
+  @media (min-width: 720px) {
+    .hero-inner { padding: 64px 28px 68px; }
+    .hero h1 { font-size: 42px; }
+    .home-hero .hero-inner { grid-template-columns: 1.3fr 1fr; }
+    .home-hero h1 { font-size: 52px; letter-spacing: -1.6px; }
+    main { padding: 40px 28px 64px; }
+    .card { padding: 26px 28px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="30" height="30"> Wristalk</a>
+  <span class="navright">
+    <span class="navlinks"><a href="support/index.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></span>
+    <a class="lang" href="de/privacy.html" hreflang="de" lang="de">Deutsch</a>
+    <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch light / dark appearance">☾</button>
+  </span>
+</nav>
+
+<header class="hero page-hero">
+  <div class="hero-inner">
+    <img class="icon" src="assets/icon.png" alt="" width="72" height="72">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Wristalk · Effective September 27, 2026</p>
+  </div>
+</header>
+<main id="main" class="narrow">
+  <a class="back" href="support/index.html">← Back to Support</a>
+  <article class="card legal">
+
+<div class="summary">
+  <p><strong>The short version</strong></p>
+  <ul>
+    <li>Your voice messages are end-to-end encrypted. We cannot listen to them.</li>
+    <li>Encrypted messages are deleted once everyone has played them — after 10 minutes at the latest, unless a
+      group uses a longer setting (at most 24 hours).</li>
+    <li>We store only what Wristalk needs to work: your Apple user ID, a display name, your devices' public keys,
+      who is in your family, contacts and groups, and for 30 days who talked with whom and when.</li>
+    <li>No ads, no tracking, no analytics, no selling of data.</li>
+  </ul>
+</div>
+
+<h2>1. Who is responsible</h2>
+<p>Wristalk is provided by CB Group LLC, 1500 N Grant St, Ste #10470, Denver, CO 80203, USA (“we”, “us”). We are the controller of the personal data
+described here. Contact: <a data-email href="mailto:hello@cbgroup.global">hello@cbgroup.global</a>.</p>
+
+<h2>2. Data we store and why</h2>
+<ul>
+  <li><strong>Account identifier.</strong> The user identifier from Sign in with Apple and an internal user ID.
+    We ask Apple for your name only — not for your email address.</li>
+  <li><strong>Display name.</strong> Your given name from Sign in with Apple, or a name you type. It is shown to your
+    contacts.</li>
+  <li><strong>Device data.</strong> An app-generated device ID, your devices' public encryption keys, and push
+    notification tokens so we can notify your watch or iPhone. We don't use advertising identifiers.</li>
+  <li><strong>Family, contact and group structure.</strong> Your family, contacts and groups (names and members),
+    invites, guardian relationships, parental-control settings, and approval requests and decisions.</li>
+  <li><strong>Talk metadata.</strong> For each message: sender, conversation, start and end time, and whether each
+    recipient received or played it. We need this to deliver messages, tell senders when someone missed them, and
+    handle abuse. It is deleted after 30 days.</li>
+  <li><strong>Encrypted voice messages.</strong> Stored only as encrypted data we cannot read, until every recipient
+    has played the message — after 10 minutes at the latest, or after the conversation's longer setting
+    (1 hour or 24 hours) if its creator chose one.</li>
+  <li><strong>Reports.</strong> If you report someone, we keep the report and the information needed to review it
+    for 90 days.</li>
+  <li><strong>Subscription status.</strong> When you buy or restore the Family Pass, the app sends us Apple's signed
+    transaction information (product, dates, whether it is a trial) so we can unlock Wristalk for your family. We never
+    receive your payment details.</li>
+  <li><strong>Technical data.</strong> Your IP address is processed when your device connects, to deliver the
+    service and limit abuse (rate limiting). Rate-limit records are deleted within 2 days. Our server logs contain no
+    voice content.</li>
+</ul>
+
+<h2>3. What we cannot see</h2>
+<p>Voice is encrypted on your device before it is sent, with keys that exist only on the devices of the people in
+the conversation. Our server passes on and briefly stores this encrypted data, but cannot decrypt it — so we cannot
+listen to, transcribe or analyse what you say.</p>
+<p>To deliver messages, our server does see who is in which family, contact list and group, who talks to whom, when
+and for how long, and the size of the data. Push notifications contain the sender's display name and a
+conversation reference, never voice content.</p>
+
+<h2>4. No tracking, ads or analytics</h2>
+<p>Wristalk contains no advertising, no analytics and no third-party tracking SDKs. We do not sell or share your data
+for advertising, and we do not build profiles about you. The app keeps a technical log on your device (without voice
+or message content); it only leaves your device if you choose to share it, for example with us for support.</p>
+
+<h2>5. Service providers</h2>
+<ul>
+  <li><strong>Cloudflare, Inc.</strong> hosts our server (message relay and database) on its global network. Data is
+    processed in the data centres of that network, which may be outside your country, including in the United
+    States.</li>
+  <li><strong>Apple</strong> provides Sign in with Apple, delivers push notifications (Apple Push Notification
+    service), and processes all payments for the Family Pass through the App Store. Apple's privacy policy applies to
+    that processing.</li>
+</ul>
+<p>We share personal data with others only if the law requires it.</p>
+
+<h2>6. How long we keep data</h2>
+<ul>
+  <li>Encrypted voice messages: until played by everyone, at most 10 minutes (or the conversation's setting, at most
+    24 hours).</li>
+  <li>Talk metadata: 30 days.</li>
+  <li>Reports: 90 days.</li>
+  <li>Invite codes: deleted 7 days after they expire or are used.</li>
+  <li>Account, device, family, contact and group data: as long as your account exists. When you delete your account,
+    your profile, memberships, contacts and devices are removed right away and the remaining records are erased within
+    30 days.</li>
+</ul>
+
+<h2>7. Children</h2>
+<p>Children use Wristalk under the control of a parent or guardian. A guardian brings a child into the family, and
+the guardian decides whom the child may talk to: new contacts and groups need the guardian's approval unless the
+guardian allows otherwise. Guardians can also set allowed hours and battery settings.</p>
+<p>We do not collect more data from children than from adults, we show them no ads, and nothing a child says can be
+heard by us. A guardian can delete all of a child's data at any time in the iPhone app (Kids → the child → Delete all
+of the child's data), or ask us by email.</p>
+
+<h2>8. Legal bases (EEA, UK and Switzerland)</h2>
+<p>We process your data to provide Wristalk under our contract with you (Art. 6(1)(b) GDPR), to keep Wristalk safe and
+handle abuse reports (legitimate interests, Art. 6(1)(f) GDPR), and to meet legal obligations (Art. 6(1)(c) GDPR).
+For children below the age of digital consent in their country, Wristalk is used with the consent and under the
+control of their parent or guardian.</p>
+
+<h2>9. International transfers</h2>
+<p>We are based in the United States, and our providers process data worldwide. Where data from the EEA, UK or
+Switzerland is transferred to other countries, we rely on appropriate safeguards such as the European Commission's
+Standard Contractual Clauses or an adequacy decision.</p>
+
+<h2>10. Security</h2>
+<p>Voice is end-to-end encrypted. Each device's keys are created and kept in its secure hardware, and all connections
+to our server are encrypted in transit. Access to our systems is restricted.</p>
+
+<h2>11. Your rights</h2>
+<p>Depending on where you live, you have the right to access your data, have it corrected or deleted, restrict or
+object to its processing, and receive it in a portable format. You can delete your account and data yourself at any
+time: on iPhone under Settings → Privacy → Delete my account…, on the watch under Settings → Privacy → Delete my
+data. For any other request, email us at <a data-email href="mailto:hello@cbgroup.global">hello@cbgroup.global</a>. You also have the right to lodge a complaint with a data
+protection supervisory authority, in particular in the country where you live.</p>
+
+<h2>12. Changes</h2>
+<p>If we change this policy, we will publish the new version here with a new effective date and inform you in a
+suitable way about significant changes.</p>
+
+<h2>13. Contact</h2>
+<p>CB Group LLC, 1500 N Grant St, Ste #10470, Denver, CO 80203, USA<br>Email: <a data-email href="mailto:hello@cbgroup.global">hello@cbgroup.global</a></p>
+
+  </article>
+</main>
+<footer>
+  <div class="links"><a href="index.html">Wristalk</a> · <a href="support/index.html">Support</a> · <span>Privacy</span> · <a href="terms.html">Terms</a></div>
+  <a class="mail" data-email href="mailto:hello@cbgroup.global">hello@cbgroup.global</a>
+  <p class="copy">© 2026 CB Group LLC</p>
+</footer>
+<script>
+(function(){
+  var links = document.querySelectorAll("[data-email]");
+  for (var i = 0; i < links.length; i++) {
+    links[i].href = "mailto:" + SUPPORT_EMAIL;
+    if (!links[i].hasAttribute("data-keep-text")) links[i].textContent = SUPPORT_EMAIL;
+  }
+  var badges = document.querySelectorAll("[data-appstore]");
+  for (var j = 0; j < badges.length; j++) {
+    var b = badges[j];
+    if (/^\[/.test(APP_STORE_URL)) {
+      b.removeAttribute("href"); b.setAttribute("aria-disabled", "true"); b.classList.add("soon");
+      var s = b.querySelector(".small"); if (s) s.textContent = b.getAttribute("data-soon");
+    } else { b.href = APP_STORE_URL; }
+  }
+  var t = document.getElementById("theme-toggle");
+  function icon() { t.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀" : "☾"; }
+  t.addEventListener("click", function(){
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("wristalk_theme", next); } catch (e) {}
+    icon();
+  });
+  icon();
+})();
+</script>
+</body>
+</html>
