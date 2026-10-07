@@ -1,5 +1,5 @@
 // wristalk.app website: static files from the repo root + worker/index.js for /.well-known, /join/*, www redirect.
-// Deploy: npx wrangler deploy (from this folder). Custom domains are attached once the wristalk.app zone is active.
+// Deploy: npx wrangler deploy (from this folder). Custom domains wristalk.app + www (zone active since 2026-10-07 UTC).
 {
   "name": "wristalk-site",
   "main": "worker/index.js",
@@ -9,7 +9,11 @@
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page",
-    "run_worker_first": ["/.well-known/*", "/join/*"]
+    "run_worker_first": true
   },
+  "routes": [
+    { "pattern": "wristalk.app", "custom_domain": true },
+    { "pattern": "www.wristalk.app", "custom_domain": true }
+  ],
   "observability": { "enabled": true }
 }

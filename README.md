@@ -1,7 +1,9 @@
 # Wristalk support site
 
 Public support, privacy and terms pages for **Wristalk** (push-to-talk for Apple Watch and iPhone, by CB Group LLC).
-Static HTML served by GitHub Pages from the `main` branch root: <https://cb2206.github.io/wristalk-support/>
+Static HTML served at **<https://wristalk.app>** by the Cloudflare Worker `wristalk-site` (`wrangler.jsonc`,
+`worker/index.js`: universal-link file, `/join/<code>` invite page, www → apex). Deploy: `npx wrangler deploy`.
+GitHub Pages (<https://cb2206.github.io/wristalk-support/>) still serves a copy from `main`.
 
 | Page | English | German |
 |---|---|---|
@@ -30,7 +32,7 @@ Set at the top of `_build/gen_pages.py`, then regenerate:
 
 | Constant | Current value | Notes |
 |---|---|---|
-| `SUPPORT_EMAIL` | `hello@cbgroup.global` | Change once the wristalk.app domain has a mailbox. Each page also carries it as `const SUPPORT_EMAIL` at the top of `<head>`; a script fills every `[data-email]` link from it. |
+| `SUPPORT_EMAIL` | `hello@wristalk.app` | Cloudflare Email Routing forwards it to the owner. Each page also carries it as `const SUPPORT_EMAIL` at the top of `<head>`; a script fills every `[data-email]` link from it. |
 | `APP_STORE_URL` | `[APP STORE LINK]` | **Placeholder.** While it starts with `[`, the App Store badge renders as "Coming soon" without a link. Put the App Store product URL here after release. |
 | `COMPANY_ADDRESS` | 1500 N Grant St, Ste #10470, Denver, CO 80203, USA | Used in privacy policy and terms. |
 | `JURISDICTION` | the State of Colorado, USA | Governing law and venue (terms §13), per language. |
