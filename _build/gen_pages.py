@@ -24,7 +24,7 @@ import content_en  # noqa: E402
 # ---------------------------------------------------------------------------
 # Site-wide values. Change them here and re-run the script.
 # ---------------------------------------------------------------------------
-SUPPORT_EMAIL = "hello@cbgroup.global"      # change again once the wristalk.app domain exists
+SUPPORT_EMAIL = "hello@wristalk.app"         # Cloudflare Email Routing → owner inbox (2026-10-06)
 APP_STORE_URL = "[APP STORE LINK]"           # App Store product URL once the app is live
 COMPANY = "CB Group LLC"
 COMPANY_ADDRESS = "1500 N Grant St, Ste #10470, Denver, CO 80203, USA"
