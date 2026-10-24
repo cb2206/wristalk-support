@@ -230,7 +230,8 @@ SUPPORT = {
              "melden Sie es uns – über „Melden“ in der App oder per E-Mail an %%EMAIL%% mit dem Anzeigenamen der "
              "Person, dem Gespräch und dem ungefähren Zeitpunkt. Da Sprache Ende-zu-Ende-verschlüsselt ist, "
              "können wir Nachrichten nicht anhören; wir handeln auf Grundlage Ihrer Meldung und der Angaben, die "
-             "unser Server hat (etwa wer wann mit wem gesprochen hat). Meldungen werden 90 Tage aufbewahrt.</p>"
+             "unser Server hat (etwa wer wann mit wem gesprochen hat). Wir prüfen jede Meldung innerhalb von 24 Stunden. "
+             "Meldungen werden 90 Tage aufbewahrt.</p>"
              "<p>Sie können eine Gruppe jederzeit verlassen, und Verantwortliche bestimmen, welche Kontakte ein "
              "Kind hat. Ist jemand in Gefahr, wenden Sie sich zuerst an den örtlichen Notruf.</p>"),
         ]},

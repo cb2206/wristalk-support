@@ -219,7 +219,7 @@ SUPPORT = {
              "Report in the app, or by email to %%EMAIL%% with the person's display name, the conversation "
              "and roughly when it happened. Because voice is end-to-end encrypted, we can't listen to "
              "messages; we act on your report and on the information our server has (such as who talked to "
-             "whom and when). Reports are kept for 90 days.</p>"
+             "whom and when). We review every report within 24 hours. Reports are kept for 90 days.</p>"
              "<p>You can leave a group at any time, and guardians decide which contacts a child has. If "
              "someone is in danger, contact your local emergency services first.</p>"),
         ]},
