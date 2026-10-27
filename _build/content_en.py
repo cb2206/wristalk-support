@@ -34,10 +34,14 @@ HOME = {
             "another family.",
         ]},
         {"title": "Live when it matters", "items": [
-            "Turn Wristalk on and incoming voice plays automatically on supported watches — no tap needed.",
-            "On other watches, Wristalk plays live through Bluetooth headphones, or sends a notification you "
-            "tap to listen.",
-            "A battery guard and an auto-off timer keep kids' watches going through the day.",
+            "A message plays by itself as soon as it arrives on a supported watch — no tap, even with the "
+            "wrist down.",
+            "After each message Wristalk stays live for 10 minutes, so replies come through instantly. Then it "
+            "goes quiet again and saves battery.",
+            "Want it live all day? Turn on Keep Wristalk live, with an auto-off timer and a battery guard for "
+            "kids' watches.",
+            "On other watches, Wristalk plays through Bluetooth headphones, or shows a notification you tap to "
+            "listen.",
         ]},
         {"title": "Private by design", "items": [
             "Every voice message is end-to-end encrypted. Only the people in the conversation can hear it — "
@@ -62,8 +66,8 @@ HOME = {
     "tiers_title": "Which Apple Watch?",
     "tiers": [
         {"kind": "live", "title": "Live through the speaker",
-         "text": "Apple Watch SE (3rd generation), Series 10, 11 and 12, Ultra 2, 3 and 4. With Wristalk on, "
-                 "voice plays automatically."},
+         "text": "Apple Watch SE (3rd generation), Series 10, 11 and 12, Ultra 2, 3 and 4. Messages play by "
+                 "themselves through the speaker."},
         {"kind": "notify", "title": "Notifications or headphones",
          "text": "Other watches with watchOS 26, such as Apple Watch SE (2nd generation) and Series 6 to 8. "
                  "The full app works; messages play live with Bluetooth headphones, otherwise you tap a "
@@ -102,7 +106,7 @@ SUPPORT = {
              "settings, but everything also works on the watch.</p>"),
             ("Which Apple Watch models are supported?",
              "<ul><li><strong>Live through the speaker:</strong> Apple Watch SE (3rd generation), Series 10, "
-             "11 and 12, Ultra 2, 3 and 4. While Wristalk is on, incoming voice plays automatically.</li>"
+             "11 and 12, Ultra 2, 3 and 4. Incoming messages play by themselves, no tap needed.</li>"
              "<li><strong>With notifications or headphones:</strong> Apple Watch SE (2nd generation), "
              "Series 6, 7 and 8, and other models that run watchOS 26. The full app works. Messages play "
              "live while Wristalk is open on screen, or with Bluetooth headphones connected; otherwise you "
@@ -144,29 +148,33 @@ SUPPORT = {
              "<p>Open a contact or group, hold the big talk button, speak, and let go. A short sound and "
              "haptic tell you when you can speak. One person talks at a time; a talk lasts up to 30 seconds. "
              "If you prefer, turn on tap to talk (tap once to start, once to stop).</p>"),
+            ("How does a message play on the watch by itself?",
+             "<p>A message arrives as a notification. On a watch that can play through its speaker, the "
+             "notification plays the message right away — no tap, even with the wrist down. Wristalk then stays "
+             "<strong>live</strong> for 10 minutes after the last message (5 or 30 minutes under Settings → "
+             "Live window), so replies come through instantly. After that the watch goes quiet again and saves "
+             "battery.</p>"
+             "<p>If you want Wristalk live all day, turn on <span class=\"kbd\">Keep Wristalk live</span> in "
+             "Settings. It has an auto-off timer and a battery guard.</p>"),
             ("Why do I sometimes have to tap a notification to hear a message?",
-             "<p>Apple Watch only lets an app receive voice live while that app is actively playing audio. "
-             "When you switch <span class=\"kbd\">Wristalk on</span> on a supported watch, Wristalk stays "
-             "ready and plays incoming voice automatically.</p>"
-             "<p>In these cases Wristalk uses <strong>notify</strong> mode instead — you get a notification "
-             "that someone is talking, and you tap it to listen:</p>"
-             "<ul><li>Wristalk is switched off, or the auto-off timer has ended.</li>"
-             "<li>The battery guard switched to notifications because the battery is low.</li>"
-             "<li>The watch can't play in the background through its speaker (older models) and no "
+             "<p>In these cases you get a notification that someone talked, with a Play button, instead of "
+             "automatic playback:</p>"
+             "<ul><li>The watch can't play through its speaker in the background (older models) and no "
              "headphones are connected.</li>"
+             "<li>Do Not Disturb or Sleep is on — nothing plays then, and you see what you missed.</li>"
+             "<li>The message is older than 10 minutes when it reaches the watch.</li>"
              "<li><span class=\"kbd\">Notify instead</span> is chosen under Settings → Delivery.</li>"
-             "<li>On a child's watch: it's outside the allowed hours a guardian has set.</li></ul>"
-             "<p>After you tap and listen, Wristalk plays live again while it stays active.</p>"),
+             "<li>On a child's watch: it's outside the allowed hours a guardian has set.</li></ul>"),
             ("What happens if someone misses my message?",
              "<p>A message is kept, encrypted, until everyone has played it — for 10 minutes at the latest "
              "(or 1 hour or 24 hours, if the person who created the group chose a longer time). If someone "
              "didn't hear it in time, you get a notification that they didn't hear your message, and they "
              "see a “missed” marker in the conversation.</p>"),
             ("What do the battery guard and auto-off timer do?",
-             "<p>Playing live keeps the watch listening, which uses more battery. The "
+             "<p>Staying live keeps the watch listening, which uses more battery. The "
              "<strong>battery guard</strong> switches from auto-play to notifications when the battery drops "
              "below a level you choose (20 % by default); charging pauses the guard. The "
-             "<strong>auto-off timer</strong> turns Wristalk off after 2 hours, 4 hours or tonight.</p>"
+             "<strong>auto-off timer</strong> ends Keep Wristalk live after 1, 2 or 4 hours or tonight.</p>"
              "<p>You find both in the watch's Settings. On a child's watch, the guardian sets the battery "
              "guard (on iPhone under Kids).</p>"),
         ]},
@@ -231,7 +239,7 @@ PRIVACY = {
     "title": "Wristalk — Privacy Policy",
     "description": "How Wristalk handles your data: end-to-end encrypted voice, minimal data, no tracking.",
     "h1": "Privacy Policy",
-    "subtitle": "Wristalk · Effective September 27, 2026",
+    "subtitle": "Wristalk · Effective %%EFFECTIVE%%",
     "body": """
 <div class="summary">
   <p><strong>The short version</strong></p>
@@ -255,8 +263,11 @@ described here. Contact: %%EMAIL%%.</p>
     We ask Apple for your name only — not for your email address.</li>
   <li><strong>Display name.</strong> Your given name from Sign in with Apple, or a name you type. It is shown to your
     contacts.</li>
-  <li><strong>Device data.</strong> An app-generated device ID, your devices' public encryption keys, and push
-    notification tokens so we can notify your watch or iPhone. We don't use advertising identifiers.</li>
+  <li><strong>Device data.</strong> An app-generated device ID, the device type and model, a device name (such as
+    “Apple Watch”), the app version, your devices' public encryption keys, and push notification tokens so we can
+    notify your watch or iPhone. We don't use advertising identifiers.</li>
+  <li><strong>Sign in with Apple token.</strong> The token Apple issues when you sign in, stored encrypted and used
+    only to revoke Wristalk's access to your Apple Account when you delete your account.</li>
   <li><strong>Family, contact and group structure.</strong> Your family, contacts and groups (names and members),
     invites, guardian relationships, parental-control settings, and approval requests and decisions.</li>
   <li><strong>Talk metadata.</strong> For each message: sender, conversation, start and end time, and whether each
@@ -265,14 +276,16 @@ described here. Contact: %%EMAIL%%.</p>
   <li><strong>Encrypted voice messages.</strong> Stored only as encrypted data we cannot read, until every recipient
     has played the message — after 10 minutes at the latest, or after the conversation's longer setting
     (1 hour or 24 hours) if its creator chose one.</li>
-  <li><strong>Reports.</strong> If you report someone, we keep the report and the information needed to review it
-    for 90 days.</li>
+  <li><strong>Reports.</strong> If you report someone, we keep the report — the reason you chose, your optional note,
+    who reported whom, and the conversation concerned — for 90 days. We receive new reports by email once a day. If a
+    child files a report, the child's guardians are notified. Reports never contain voice.</li>
   <li><strong>Subscription status.</strong> When you buy or restore the Family Pass, the app sends us Apple's signed
-    transaction information (product, dates, whether it is a trial) so we can unlock Wristalk for your family. We never
-    receive your payment details.</li>
+    transaction information (product, dates, whether it is a trial) so we can unlock Wristalk for your family. Apple
+    also informs our server of renewals, expirations and refunds. We never receive your payment details.</li>
   <li><strong>Technical data.</strong> Your IP address is processed when your device connects, to deliver the
-    service and limit abuse (rate limiting). Rate-limit records are deleted within 2 days. Our server logs contain no
-    voice content.</li>
+    service and limit abuse (rate limiting). Rate-limit records are deleted within 2 days. Our hosting provider keeps
+    short-lived request logs for troubleshooting, which are deleted automatically after a few days. Our server logs
+    contain no voice content.</li>
 </ul>
 
 <h2>3. What we cannot see</h2>
@@ -281,7 +294,10 @@ the conversation. Our server passes on and briefly stores this encrypted data, b
 listen to, transcribe or analyse what you say.</p>
 <p>To deliver messages, our server does see who is in which family, contact list and group, who talks to whom, when
 and for how long, and the size of the data. Push notifications contain the sender's display name and a
-conversation reference, never voice content.</p>
+conversation reference (for approval requests, the names of the people involved), never voice content.</p>
+<p>Guardians see, for each child in their family, the child's contacts, groups, devices and approval requests, and an
+activity log of whom the child talked with and when (the last 30 days). They never hear messages they were not part
+of.</p>
 
 <h2>4. No tracking, ads or analytics</h2>
 <p>Wristalk contains no advertising, no analytics and no third-party tracking SDKs. We do not sell or share your data
@@ -297,7 +313,8 @@ or message content); it only leaves your device if you choose to share it, for e
     service), and processes all payments for the Family Pass through the App Store. Apple's privacy policy applies to
     that processing.</li>
 </ul>
-<p>We share personal data with others only if the law requires it.</p>
+<p>We share personal data with others only if the law requires it. Our email provider receives the daily report
+emails and the messages you send us.</p>
 
 <h2>6. How long we keep data</h2>
 <ul>
@@ -306,18 +323,25 @@ or message content); it only leaves your device if you choose to share it, for e
   <li>Talk metadata: 30 days.</li>
   <li>Reports: 90 days.</li>
   <li>Invite codes: deleted 7 days after they expire or are used.</li>
+  <li>Subscription records: as long as your family exists; Apple's notifications about them, 30 days.</li>
   <li>Account, device, family, contact and group data: as long as your account exists. When you delete your account,
     your profile, memberships, contacts and devices are removed right away and the remaining records are erased within
     30 days.</li>
 </ul>
 
 <h2>7. Children</h2>
-<p>Children use Wristalk under the control of a parent or guardian. A guardian brings a child into the family, and
-the guardian decides whom the child may talk to: new contacts and groups need the guardian's approval unless the
-guardian allows otherwise. Guardians can also set allowed hours and battery settings.</p>
-<p>We do not collect more data from children than from adults, we show them no ads, and nothing a child says can be
-heard by us. A guardian can delete all of a child's data at any time in the iPhone app (Kids → the child → Delete all
-of the child's data), or ask us by email.</p>
+<p>Children use Wristalk only as members of a family, under the control of a parent or guardian. A guardian brings a
+child into the family with an invite code created for a child, and the guardian decides whom the child may talk to:
+new contacts and groups need the guardian's approval unless the guardian allows otherwise. Guardians can also set
+allowed hours, delivery and battery settings.</p>
+<p>From children we collect the same limited data as from adults (section 2): the Sign in with Apple identifier, a
+display name, device data, family, contact and group structure, talk metadata and reports. We use it only to provide
+Wristalk, never for advertising, and we do not disclose it to third parties except the service providers in
+section 5. Nothing a child says can be heard by us.</p>
+<p>A guardian can review a child's contacts, groups, devices and activity in the iPhone app (Kids → the child), stop
+further collection and delete all of the child's data at any time (Kids → the child → Delete all of the child's
+data), or ask us by email at %%EMAIL%%. If we learn that a child under 13 uses Wristalk without a guardian in their
+family, we delete the account.</p>
 
 <h2>8. Legal bases (EEA, UK and Switzerland)</h2>
 <p>We process your data to provide Wristalk under our contract with you (Art. 6(1)(b) GDPR), to keep Wristalk safe and
@@ -355,7 +379,7 @@ TERMS = {
     "title": "Wristalk — Terms of Use",
     "description": "Terms of use for Wristalk, including the Family Pass subscription.",
     "h1": "Terms of Use",
-    "subtitle": "Wristalk · Effective September 27, 2026",
+    "subtitle": "Wristalk · Effective %%EFFECTIVE%%",
     "body": """
 <h2>1. About these terms</h2>
 <p>These terms govern your use of the Wristalk apps for Apple Watch and iPhone and the related service (“Wristalk”),
@@ -377,12 +401,14 @@ anyone. You are responsible for activity from your account and devices.</p>
 
 <h2>4. Children and guardians</h2>
 <p>Children may use Wristalk only with the consent and under the control of a parent or guardian, who sets up the
-child's use in a family and manages whom the child can talk to. Guardians are responsible for their children's use of
+child's use in a family and manages whom the child can talk to. Children under 13 (or the age of digital consent in
+their country) may use Wristalk only as a child member of a family set up by their guardian. Guardians are responsible for their children's use of
 Wristalk and for deciding that it is appropriate for them.</p>
 
 <h2>5. Family Pass subscription</h2>
 <ul>
-  <li>Wristalk is free to download. Talking requires an active Family Pass for your family.</li>
+  <li>Wristalk is free to download. Talking requires an active Family Pass (or its free trial) for your family. Each
+    family needs its own Family Pass, including families you talk with as contacts.</li>
   <li>Eligible new subscribers get a <strong>free 7-day trial</strong>. After the trial, the Family Pass is an
     <strong>annual, automatically renewing subscription</strong> at the price shown in the App Store before you
     confirm.</li>

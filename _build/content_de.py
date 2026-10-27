@@ -35,11 +35,14 @@ HOME = {
             "Freunde aus einer anderen Familie.",
         ]},
         {"title": "Live, wenn es darauf ankommt", "items": [
-            "Schalten Sie Wristalk ein, und eingehende Sprache wird auf unterstützten Uhren automatisch "
-            "abgespielt – ohne zu tippen.",
-            "Auf anderen Uhren spielt Wristalk live über Bluetooth-Kopfhörer oder schickt eine Mitteilung, die "
-            "Sie zum Anhören antippen.",
-            "Akkuschutz und Ausschalt-Timer sorgen dafür, dass Kinderuhren den Tag durchhalten.",
+            "Auf unterstützten Uhren spielt eine Nachricht von selbst, sobald sie ankommt – ohne zu tippen, "
+            "auch bei gesenktem Handgelenk.",
+            "Nach jeder Nachricht bleibt Wristalk 10 Minuten live, damit Antworten sofort ankommen. Danach wird "
+            "es wieder still und schont den Akku.",
+            "Den ganzen Tag live? Schalten Sie „Wristalk live halten“ ein – mit Ausschalt-Timer und Akkuschutz "
+            "für Kinderuhren.",
+            "Auf anderen Uhren spielt Wristalk über Bluetooth-Kopfhörer oder zeigt eine Mitteilung, die Sie zum "
+            "Anhören antippen.",
         ]},
         {"title": "Privat von Anfang an", "items": [
             "Jede Sprachnachricht ist Ende-zu-Ende-verschlüsselt. Nur die Personen im Gespräch können sie hören – "
@@ -64,8 +67,8 @@ HOME = {
     "tiers_title": "Welche Apple Watch?",
     "tiers": [
         {"kind": "live", "title": "Live über den Lautsprecher",
-         "text": "Apple Watch SE (3. Generation), Series 10, 11 und 12, Ultra 2, 3 und 4. Ist Wristalk an, wird "
-                 "Sprache automatisch abgespielt."},
+         "text": "Apple Watch SE (3. Generation), Series 10, 11 und 12, Ultra 2, 3 und 4. Nachrichten spielen von "
+                 "selbst über den Lautsprecher."},
         {"kind": "notify", "title": "Mitteilungen oder Kopfhörer",
          "text": "Andere Uhren mit watchOS 26, etwa Apple Watch SE (2. Generation) und Series 6 bis 8. Die ganze "
                  "App funktioniert; Nachrichten laufen live über Bluetooth-Kopfhörer, sonst tippen Sie zum "
@@ -105,8 +108,7 @@ SUPPORT = {
              "der Kinder, aber alles funktioniert auch auf der Uhr.</p>"),
             ("Welche Apple Watch-Modelle werden unterstützt?",
              "<ul><li><strong>Live über den Lautsprecher:</strong> Apple Watch SE (3. Generation), Series 10, 11 "
-             "und 12, Ultra 2, 3 und 4. Solange Wristalk an ist, wird eingehende Sprache automatisch "
-             "abgespielt.</li>"
+             "und 12, Ultra 2, 3 und 4. Eingehende Nachrichten spielen von selbst, ohne zu tippen.</li>"
              "<li><strong>Mit Mitteilungen oder Kopfhörern:</strong> Apple Watch SE (2. Generation), Series 6, 7 "
              "und 8 sowie andere Modelle mit watchOS 26. Die ganze App funktioniert. Nachrichten laufen live, "
              "solange Wristalk auf dem Bildschirm geöffnet ist oder Bluetooth-Kopfhörer verbunden sind; sonst "
@@ -149,22 +151,26 @@ SUPPORT = {
              "Sie und lassen Sie los. Ein kurzer Ton und ein Tippen am Handgelenk zeigen, dass Sie sprechen "
              "können. Es spricht immer nur eine Person; eine Nachricht dauert höchstens 30 Sekunden. Wenn Sie "
              "möchten, schalten Sie „Zum Sprechen tippen“ ein (einmal tippen zum Starten, einmal zum Beenden).</p>"),
+            ("Wie spielt eine Nachricht auf der Uhr von selbst?",
+             "<p>Eine Nachricht kommt als Mitteilung an. Auf einer Uhr, die über ihren Lautsprecher abspielen "
+             "kann, spielt die Mitteilung die Nachricht sofort ab – ohne zu tippen, auch bei gesenktem "
+             "Handgelenk. Danach bleibt Wristalk 10 Minuten nach der letzten Nachricht <strong>live</strong> "
+             "(5 oder 30 Minuten unter Einstellungen → Live-Fenster), damit Antworten sofort ankommen. Danach "
+             "wird die Uhr wieder still und schont den Akku.</p>"
+             "<p>Soll Wristalk den ganzen Tag live sein, schalten Sie in den Einstellungen "
+             "<span class=\"kbd\">Wristalk live halten</span> ein – mit Ausschalt-Timer und Akkuschutz.</p>"),
             ("Warum muss ich manchmal auf eine Mitteilung tippen, um eine Nachricht zu hören?",
-             "<p>Die Apple Watch lässt eine App nur dann live Sprache empfangen, wenn sie gerade aktiv Audio "
-             "abspielt. Wenn Sie auf einer unterstützten Uhr <span class=\"kbd\">Wristalk an</span> schalten, "
-             "bleibt Wristalk empfangsbereit und spielt eingehende Sprache automatisch ab.</p>"
-             "<p>In diesen Fällen nutzt Wristalk stattdessen den Modus <strong>Mitteilen</strong> – Sie erhalten "
-             "eine Mitteilung, dass jemand spricht, und tippen sie zum Anhören an:</p>"
-             "<ul><li>Wristalk ist ausgeschaltet oder der Ausschalt-Timer ist abgelaufen.</li>"
-             "<li>Der Akkuschutz hat wegen niedrigen Akkus auf Mitteilungen umgestellt.</li>"
-             "<li>Die Uhr kann im Hintergrund nicht über ihren Lautsprecher abspielen (ältere Modelle), und es "
-             "sind keine Kopfhörer verbunden.</li>"
+             "<p>In diesen Fällen erhalten Sie statt der automatischen Wiedergabe eine Mitteilung mit einer "
+             "Taste zum Abspielen:</p>"
+             "<ul><li>Die Uhr kann im Hintergrund nicht über ihren Lautsprecher abspielen (ältere Modelle), und "
+             "es sind keine Kopfhörer verbunden.</li>"
+             "<li>„Nicht stören“ oder der Schlafmodus ist an – dann spielt nichts, und Sie sehen, was Sie "
+             "verpasst haben.</li>"
+             "<li>Die Nachricht ist beim Eintreffen auf der Uhr älter als 10 Minuten.</li>"
              "<li>Unter Einstellungen → Zustellung ist <span class=\"kbd\">Stattdessen mitteilen</span> "
              "gewählt.</li>"
              "<li>Auf der Uhr eines Kindes: Es ist außerhalb der erlaubten Zeiten, die ein Verantwortlicher "
-             "festgelegt hat.</li></ul>"
-             "<p>Nachdem Sie getippt und zugehört haben, spielt Wristalk wieder live ab, solange es aktiv "
-             "bleibt.</p>"),
+             "festgelegt hat.</li></ul>"),
             ("Was passiert, wenn jemand meine Nachricht verpasst?",
              "<p>Eine Nachricht wird verschlüsselt aufbewahrt, bis alle sie abgespielt haben – höchstens 10 "
              "Minuten lang (oder 1 bzw. 24 Stunden, wenn die Person, die die Gruppe erstellt hat, eine längere "
@@ -172,11 +178,11 @@ SUPPORT = {
              "Nachricht nicht angekommen ist, und die andere Person sieht im Gespräch einen Hinweis "
              "„verpasst“.</p>"),
             ("Was machen Akkuschutz und Ausschalt-Timer?",
-             "<p>Live-Wiedergabe hält die Uhr empfangsbereit und braucht mehr Akku. Der "
+             "<p>Live bleiben hält die Uhr empfangsbereit und braucht mehr Akku. Der "
              "<strong>Akkuschutz</strong> wechselt von automatischem Abspielen zu Mitteilungen, sobald der Akku "
              "unter eine gewählte Grenze fällt (standardmäßig 20 %); beim Laden pausiert er. Der "
-             "<strong>Ausschalt-Timer</strong> („Automatisch aus“) schaltet Wristalk nach 2 Stunden, 4 Stunden "
-             "oder heute Abend aus.</p>"
+             "<strong>Ausschalt-Timer</strong> („Automatisch aus“) beendet „Wristalk live halten“ nach 1, 2 oder "
+             "4 Stunden oder heute Abend.</p>"
              "<p>Beides finden Sie in den Einstellungen der Uhr. Auf der Uhr eines Kindes legt ein "
              "Verantwortlicher den Akkuschutz fest (auf dem iPhone unter Kinder).</p>"),
         ]},
@@ -244,7 +250,7 @@ PRIVACY = {
     "description": "Wie Wristalk mit Ihren Daten umgeht: Ende-zu-Ende-verschlüsselte Sprache, wenige Daten, "
                    "kein Tracking.",
     "h1": "Datenschutzerklärung",
-    "subtitle": "Wristalk · Gültig ab 27. September 2026",
+    "subtitle": "Wristalk · Gültig ab %%EFFECTIVE%%",
     "body": """
 <div class="summary">
   <p><strong>Das Wichtigste in Kürze</strong></p>
@@ -269,8 +275,12 @@ beschriebenen personenbezogenen Daten. Kontakt: %%EMAIL%%.</p>
     fragen bei Apple nur Ihren Namen ab – nicht Ihre E-Mail-Adresse.</li>
   <li><strong>Anzeigename.</strong> Ihr Vorname aus „Mit Apple anmelden“ oder ein Name, den Sie eingeben. Er wird Ihren
     Kontakten angezeigt.</li>
-  <li><strong>Gerätedaten.</strong> Eine von der App erzeugte Geräte-ID, die öffentlichen Schlüssel Ihrer Geräte und
-    Push-Token, damit wir Ihre Uhr oder Ihr iPhone benachrichtigen können. Werbe-IDs nutzen wir nicht.</li>
+  <li><strong>Gerätedaten.</strong> Eine von der App erzeugte Geräte-ID, Gerätetyp und Modell, ein Gerätename (etwa
+    „Apple Watch“), die App-Version, die öffentlichen Schlüssel Ihrer Geräte und Push-Token, damit wir Ihre Uhr oder Ihr
+    iPhone benachrichtigen können. Werbe-IDs nutzen wir nicht.</li>
+  <li><strong>Token von „Mit Apple anmelden“.</strong> Das Token, das Apple bei der Anmeldung ausstellt – verschlüsselt
+    gespeichert und nur dazu verwendet, den Zugriff von Wristalk auf Ihren Apple Account zu widerrufen, wenn Sie Ihr
+    Konto löschen.</li>
   <li><strong>Familien-, Kontakt- und Gruppenstruktur.</strong> Ihre Familie, Kontakte und Gruppen (Namen und
     Mitglieder), Einladungen, Verantwortlichen-Beziehungen, Einstellungen der Kindersicherung sowie Freigabeanfragen
     und -entscheidungen.</li>
@@ -280,14 +290,18 @@ beschriebenen personenbezogenen Daten. Kontakt: %%EMAIL%%.</p>
   <li><strong>Verschlüsselte Sprachnachrichten.</strong> Nur als verschlüsselte Daten gespeichert, die wir nicht lesen
     können – bis jeder Empfänger die Nachricht abgespielt hat, höchstens 10 Minuten lang oder, falls die Person, die das
     Gespräch erstellt hat, eine längere Zeit gewählt hat, 1 bzw. 24 Stunden.</li>
-  <li><strong>Meldungen.</strong> Wenn Sie jemanden melden, bewahren wir die Meldung und die zur Prüfung nötigen
-    Angaben 90 Tage auf.</li>
+  <li><strong>Meldungen.</strong> Wenn Sie jemanden melden, bewahren wir die Meldung – den gewählten Grund, Ihre
+    optionale Notiz, wer wen gemeldet hat und das betroffene Gespräch – 90 Tage auf. Neue Meldungen erhalten wir einmal
+    täglich per E-Mail. Meldet ein Kind jemanden, werden seine Verantwortlichen benachrichtigt. Meldungen enthalten nie
+    Sprache.</li>
   <li><strong>Abo-Status.</strong> Wenn Sie den Family Pass kaufen oder wiederherstellen, sendet uns die App Apples
     signierte Transaktionsdaten (Produkt, Zeitraum, ob es sich um einen Probezeitraum handelt), damit wir Wristalk für
-    Ihre Familie freischalten können. Ihre Zahlungsdaten erhalten wir nie.</li>
+    Ihre Familie freischalten können. Außerdem informiert Apple unseren Server über Verlängerungen, Abläufe und
+    Erstattungen. Ihre Zahlungsdaten erhalten wir nie.</li>
   <li><strong>Technische Daten.</strong> Ihre IP-Adresse wird beim Verbindungsaufbau verarbeitet, um den Dienst zu
     erbringen und Missbrauch zu begrenzen (Ratenbegrenzung). Diese Einträge werden innerhalb von 2 Tagen gelöscht.
-    Unsere Server-Protokolle enthalten keine Sprachinhalte.</li>
+    Unser Hosting-Anbieter führt kurzlebige Anfrage-Protokolle zur Fehlersuche, die nach wenigen Tagen automatisch
+    gelöscht werden. Unsere Server-Protokolle enthalten keine Sprachinhalte.</li>
 </ul>
 
 <h2>3. Was wir nicht sehen können</h2>
@@ -296,7 +310,11 @@ Personen im Gespräch existieren. Unser Server leitet diese verschlüsselten Dat
 sie aber nicht entschlüsseln. Wir können also nicht anhören, abschreiben oder auswerten, was Sie sagen.</p>
 <p>Um Nachrichten zuzustellen, sieht unser Server allerdings, wer zu welcher Familie, Kontaktliste und Gruppe gehört,
 wer mit wem spricht, wann und wie lange, sowie die Größe der Daten. Push-Mitteilungen enthalten den Anzeigenamen des
-Absenders und einen Verweis auf das Gespräch, niemals Sprachinhalte.</p>
+Absenders und einen Verweis auf das Gespräch (bei Freigabeanfragen die Namen der Beteiligten), niemals
+Sprachinhalte.</p>
+<p>Verantwortliche sehen für jedes Kind in ihrer Familie dessen Kontakte, Gruppen, Geräte und Freigabeanfragen sowie
+ein Aktivitätsprotokoll, mit wem das Kind wann gesprochen hat (die letzten 30 Tage). Nachrichten, an denen sie nicht
+beteiligt waren, hören sie nie.</p>
 
 <h2>4. Kein Tracking, keine Werbung, keine Analyse</h2>
 <p>Wristalk enthält keine Werbung, keine Analyse-Tools und keine Tracking-SDKs von Drittanbietern. Wir verkaufen Ihre
@@ -313,7 +331,8 @@ teilen, zum Beispiel mit uns für den Support.</p>
     Service) und wickelt alle Zahlungen für den Family Pass über den App Store ab. Für diese Verarbeitung gilt die
     Datenschutzrichtlinie von Apple.</li>
 </ul>
-<p>Andere erhalten personenbezogene Daten von uns nur, wenn das Gesetz es verlangt.</p>
+<p>Andere erhalten personenbezogene Daten von uns nur, wenn das Gesetz es verlangt. Unser E-Mail-Anbieter erhält die
+täglichen Meldungs-E-Mails und die Nachrichten, die Sie uns schicken.</p>
 
 <h2>6. Speicherdauer</h2>
 <ul>
@@ -322,19 +341,25 @@ teilen, zum Beispiel mit uns für den Support.</p>
   <li>Gesprächs-Metadaten: 30 Tage.</li>
   <li>Meldungen: 90 Tage.</li>
   <li>Einladungscodes: 7 Tage nach Ablauf oder Verwendung gelöscht.</li>
+  <li>Abo-Daten: solange Ihre Familie besteht; Apples Benachrichtigungen dazu 30 Tage.</li>
   <li>Konto-, Geräte-, Familien-, Kontakt- und Gruppendaten: solange Ihr Konto besteht. Wenn Sie Ihr Konto löschen,
     werden Profil, Mitgliedschaften, Kontakte und Geräte sofort entfernt und die übrigen Einträge innerhalb von
     30 Tagen gelöscht.</li>
 </ul>
 
 <h2>7. Kinder</h2>
-<p>Kinder nutzen Wristalk unter der Aufsicht eines Elternteils oder einer anderen verantwortlichen Person. Diese nimmt
-das Kind in die Familie auf und bestimmt, mit wem es sprechen darf: Neue Kontakte und Gruppen brauchen ihre Freigabe,
-sofern sie nichts anderes erlaubt. Verantwortliche können außerdem erlaubte Zeiten und Akku-Einstellungen
-festlegen.</p>
-<p>Wir erheben von Kindern nicht mehr Daten als von Erwachsenen, zeigen ihnen keine Werbung, und nichts, was ein Kind
-sagt, können wir hören. Verantwortliche können alle Daten eines Kindes jederzeit in der iPhone-App löschen (Kinder →
-das Kind → Alle Daten löschen) oder uns per E-Mail darum bitten.</p>
+<p>Kinder nutzen Wristalk nur als Mitglieder einer Familie und unter der Aufsicht eines Elternteils oder einer anderen
+verantwortlichen Person. Diese nimmt das Kind mit einem Einladungscode für ein Kind in die Familie auf und bestimmt,
+mit wem es sprechen darf: Neue Kontakte und Gruppen brauchen ihre Freigabe, sofern sie nichts anderes erlaubt.
+Verantwortliche können außerdem erlaubte Zeiten, Zustellung und Akku-Einstellungen festlegen.</p>
+<p>Von Kindern erheben wir dieselben wenigen Daten wie von Erwachsenen (Abschnitt 2): die Kennung aus „Mit Apple
+anmelden“, einen Anzeigenamen, Gerätedaten, Familien-, Kontakt- und Gruppenstruktur, Gesprächs-Metadaten und
+Meldungen. Wir nutzen sie nur, um Wristalk bereitzustellen, nie für Werbung, und geben sie außer an die Dienstleister
+in Abschnitt 5 nicht an Dritte weiter. Nichts, was ein Kind sagt, können wir hören.</p>
+<p>Verantwortliche können die Kontakte, Gruppen, Geräte und Aktivitäten eines Kindes in der iPhone-App einsehen (Kinder
+→ das Kind), die weitere Erhebung beenden und alle Daten des Kindes jederzeit löschen (Kinder → das Kind → Alle Daten
+löschen) oder uns per E-Mail an %%EMAIL%% darum bitten. Erfahren wir, dass ein Kind unter 13 Jahren Wristalk ohne
+verantwortliche Person in seiner Familie nutzt, löschen wir das Konto.</p>
 
 <h2>8. Rechtsgrundlagen (EWR, Vereinigtes Königreich und Schweiz)</h2>
 <p>Wir verarbeiten Ihre Daten, um Wristalk im Rahmen unseres Vertrags mit Ihnen bereitzustellen (Art. 6 Abs. 1 lit. b
@@ -376,7 +401,7 @@ TERMS = {
     "title": "Wristalk — Nutzungsbedingungen",
     "description": "Nutzungsbedingungen für Wristalk, einschließlich des Family-Pass-Abos.",
     "h1": "Nutzungsbedingungen",
-    "subtitle": "Wristalk · Gültig ab 27. September 2026",
+    "subtitle": "Wristalk · Gültig ab %%EFFECTIVE%%",
     "body": """
 <h2>1. Über diese Bedingungen</h2>
 <p>Diese Bedingungen regeln die Nutzung der Wristalk-Apps für Apple Watch und iPhone und des zugehörigen Dienstes
@@ -401,12 +426,16 @@ verantwortlich.</p>
 <h2>4. Kinder und Verantwortliche</h2>
 <p>Kinder dürfen Wristalk nur mit Einwilligung und unter Aufsicht eines Elternteils oder einer anderen
 verantwortlichen Person nutzen, die die Nutzung des Kindes in einer Familie einrichtet und bestimmt, mit wem das Kind
-sprechen darf. Verantwortliche sind für die Nutzung durch ihre Kinder verantwortlich und entscheiden, ob Wristalk für
+sprechen darf. Kinder unter 13 Jahren (bzw. unter dem in ihrem Land geltenden Mindestalter für die Einwilligung)
+dürfen Wristalk nur als Kind in einer Familie nutzen, die ihre Verantwortlichen eingerichtet haben. Verantwortliche
+sind für die Nutzung durch ihre Kinder verantwortlich und entscheiden, ob Wristalk für
 sie geeignet ist.</p>
 
 <h2>5. Family-Pass-Abo</h2>
 <ul>
-  <li>Wristalk ist kostenlos zu laden. Zum Sprechen braucht Ihre Familie einen aktiven Family Pass.</li>
+  <li>Wristalk ist kostenlos zu laden. Zum Sprechen braucht Ihre Familie einen aktiven Family Pass (oder dessen
+    kostenlosen Probezeitraum). Jede Familie braucht einen eigenen Family Pass, auch Familien, mit denen Sie als
+    Kontakte sprechen.</li>
   <li>Berechtigte Neukunden erhalten einen <strong>kostenlosen Probezeitraum von 7 Tagen</strong>. Danach ist der
     Family Pass ein <strong>Jahresabo, das sich automatisch verlängert</strong>, zu dem Preis, den der App Store vor
     Ihrer Bestätigung anzeigt.</li>

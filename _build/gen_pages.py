@@ -30,6 +30,8 @@ COMPANY = "CB Group LLC"
 COMPANY_ADDRESS = "1500 N Grant St, Ste #10470, Denver, CO 80203, USA"
 # Governing law and venue, as it reads inside a sentence in each language.
 JURISDICTION = {"en": "the State of Colorado, USA", "de": "des Bundesstaats Colorado, USA"}
+# Effective date of the privacy policy and terms (set when a new version is published), per language.
+EFFECTIVE = {"en": "October 27, 2026", "de": "27. Oktober 2026"}
 
 LANGS = {"en": "", "de": "de/"}              # language -> folder prefix
 PAGES = {"home": "index.html", "support": "support/index.html",
@@ -258,6 +260,7 @@ def fill(html, lang, page):
         "%%COMPANY%%": COMPANY,
         "%%ADDRESS%%": COMPANY_ADDRESS,
         "%%JURISDICTION%%": JURISDICTION[lang],
+        "%%EFFECTIVE%%": EFFECTIVE[lang],
     }
     for k, v in reps.items():
         html = html.replace(k, v)
