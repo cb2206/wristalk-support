@@ -331,8 +331,8 @@ teilen, zum Beispiel mit uns für den Support.</p>
     Service) und wickelt alle Zahlungen für den Family Pass über den App Store ab. Für diese Verarbeitung gilt die
     Datenschutzrichtlinie von Apple.</li>
 </ul>
-<p>Andere erhalten personenbezogene Daten von uns nur, wenn das Gesetz es verlangt. Unser E-Mail-Anbieter erhält die
-täglichen Meldungs-E-Mails und die Nachrichten, die Sie uns schicken.</p>
+<p>Andere erhalten personenbezogene Daten von uns nur, wenn das Gesetz es verlangt. Neue Meldungen gehen einmal täglich per E-Mail an
+unser Support-Postfach %%EMAIL%%. Unser E-Mail-Anbieter erhält diese E-Mails und die Nachrichten, die Sie uns schicken.</p>
 
 <h2>6. Speicherdauer</h2>
 <ul>

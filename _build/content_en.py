@@ -313,8 +313,8 @@ or message content); it only leaves your device if you choose to share it, for e
     service), and processes all payments for the Family Pass through the App Store. Apple's privacy policy applies to
     that processing.</li>
 </ul>
-<p>We share personal data with others only if the law requires it. Our email provider receives the daily report
-emails and the messages you send us.</p>
+<p>We share personal data with others only if the law requires it. New reports are emailed once a day to our support
+mailbox, %%EMAIL%%. Our email provider receives these emails and the messages you send us.</p>
 
 <h2>6. How long we keep data</h2>
 <ul>
