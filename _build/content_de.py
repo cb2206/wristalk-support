@@ -6,12 +6,15 @@ THEME_LABEL = "Helle / dunkle Darstellung umschalten"
 NAV = {"home": "Wristalk", "support": "Support", "privacy": "Datenschutz", "terms": "Nutzungsbedingungen"}
 BACK_HOME = "← Zurück zu Wristalk"
 BACK_SUPPORT = "← Zurück zum Support"
+OG_LOCALE = "de_DE"
+OG_IMAGE_ALT = "Wristalk-App-Symbol: eine Apple Watch mit Schallwellen. Walkie-Talkie für die Familie."
 
 # ---------------------------------------------------------------------------
 HOME = {
     "title": "Wristalk — Walkie-Talkie für die Familie",
-    "description": "Live-Push-to-Talk für Familien auf Apple Watch und iPhone. Läuft auf Kinderuhren mit "
-                   "Familienkonfiguration ohne iPhone. Mit Kindersicherung, Ende-zu-Ende-verschlüsselt.",
+    "description": "Push-to-Talk für Familien auf Apple Watch und iPhone. Läuft auf Kinderuhren mit "
+                   "Familienkonfiguration ohne iPhone. Mit Kindersicherung, Ende-zu-Ende-verschlüsselt. "
+                   "Kostenlos laden.",
     "eyebrow": "Für Apple Watch und iPhone",
     "h1": "Das Walkie-Talkie ist zurück am Handgelenk.",
     "tagline": "Halten Sie die Sprechtaste gedrückt und sprechen Sie. Auf den Uhren Ihrer Familie ist Ihre Stimme "
@@ -20,55 +23,88 @@ HOME = {
     "badge_small": "Laden im",
     "badge_soon": "Demnächst im",
     "help_link": "Hilfe &amp; FAQ",
-    "fineprint": "Kostenlos laden. Den Family Pass eine Woche gratis testen, danach verlängert er sich jährlich.",
-    "watch_alt": "Illustration einer Apple Watch mit großer Sprechtaste",
-    "watch_name": "Mama",
-    "watch_hint": "Halten zum Sprechen",
+    "fineprint": "Kostenlos im US-App-Store. Family Pass: 1 Woche gratis, danach 19,99 $ pro Jahr. "
+                 "Benötigt watchOS 26 bzw. iOS 26.",
+    "watch_alt": "Wristalk auf der Apple Watch: Kyra spricht mit der Familie, Wiedergabe über den Lautsprecher",
     "band": "Für Familien gemacht: Kinderuhren mit Familienkonfiguration funktionieren ganz ohne eigenes iPhone, "
             "und Eltern bestimmen, mit wem ein Kind sprechen darf.",
     "features": [
         {"title": "Für Familien gemacht", "items": [
             "Läuft auf Kinderuhren mit Familienkonfiguration – ganz ohne eigenes iPhone.",
-            "Eltern bestimmen, mit wem ein Kind sprechen darf. Neue Kontakte und Gruppen brauchen die Zustimmung "
-            "der Eltern, und die lässt sich jederzeit ändern.",
+            "Eltern bestimmen, mit wem ein Kind sprechen darf. Neue Kontakte und Gruppen brauchen die Freigabe "
+            "eines Verantwortlichen, und Verantwortliche legen fest, zu welchen Zeiten Nachrichten spielen.",
             "Sprechen Sie zu zweit oder in Gruppen: die ganze Familie, nur die Kinder, die Großeltern oder "
             "Freunde aus einer anderen Familie.",
+            "Laden Sie Personen über Nachrichten, per QR-Code oder mit einem kurzen Code zum Vorlesen ein. "
+            "Erwachsene können ihre Familie jederzeit verlassen oder wechseln.",
         ]},
         {"title": "Live, wenn es darauf ankommt", "items": [
             "Auf unterstützten Uhren spielt eine Nachricht von selbst, sobald sie ankommt – ohne zu tippen, "
             "auch bei gesenktem Handgelenk.",
             "Nach jeder Nachricht bleibt Wristalk 10 Minuten live, damit Antworten sofort ankommen. Danach wird "
             "es wieder still und schont den Akku.",
-            "Den ganzen Tag live? Schalten Sie „Wristalk live halten“ ein – mit Ausschalt-Timer und Akkuschutz "
-            "für Kinderuhren.",
-            "Auf anderen Uhren spielt Wristalk über Bluetooth-Kopfhörer oder zeigt eine Mitteilung, die Sie zum "
-            "Anhören antippen.",
+            "Den ganzen Tag live? Schalten Sie „Wristalk live halten“ ein – mit automatischem Ausschalten nach "
+            "1, 2 oder 4 Stunden oder heute Abend und mit Akkuschutz.",
+            "Bei „Nicht stören“ und im Schlafmodus spielt nichts – Sie sehen, was Sie verpasst haben. Stoppen "
+            "Sie eine Nachricht beim Abspielen, und löschen Sie verpasste.",
         ]},
         {"title": "Privat von Anfang an", "items": [
             "Jede Sprachnachricht ist Ende-zu-Ende-verschlüsselt. Nur die Personen im Gespräch können sie hören – "
             "nicht wir, niemand sonst.",
-            "Nachrichten verschwinden nach dem Abspielen, spätestens nach 10 Minuten. Hat Sie jemand verpasst, "
-            "erfahren Sie es.",
+            "Nachrichten werden nach dem Abspielen gelöscht, spätestens nach 10 Minuten. Hat Sie jemand "
+            "verpasst, erfahren Sie es.",
+            "Melden oder blockieren Sie jeden, der Sie belästigt; Verantwortliche können das auch für ihre "
+            "Kinder tun.",
             "Anmelden mit Apple. Keine E-Mail-Adresse, keine Telefonnummer, keine Werbung, kein Tracking.",
         ]},
         {"title": "Auch auf dem iPhone", "items": [
-            "In der iPhone-App verwalten Sie bequem Personen, Gruppen und die Einstellungen der Kinder.",
-            "Sie ist selbst ein Walkie-Talkie mit der Push-to-Talk-Steuerung des Systems – so können auch Eltern "
-            "ohne Uhr mitsprechen.",
-            "Laden Sie Personen per Code über Nachrichten oder per QR-Code ein.",
+            "In der iPhone-App verwalten Sie bequem Personen, Gruppen und die Einstellungen der Kinder und "
+            "erteilen Freigaben.",
+            "Sie ist selbst ein Walkie-Talkie mit Apples Push-to-Talk des Systems – Nachrichten spielen auch, "
+            "wenn Wristalk geschlossen ist.",
+            "So können auch Eltern ohne Apple Watch mit der Familie sprechen.",
         ]},
-        {"title": "Ein Pass für die ganze Familie", "items": [
-            "Kostenlos laden, die erste Woche Family Pass gratis.",
-            "Danach ist der Family Pass ein Jahresabo, abgerechnet über Apple.",
-            "Er wird per Familienfreigabe mit Ihrer Apple-Familie geteilt und lässt sich jederzeit in den "
-            "App-Store-Einstellungen kündigen.",
-        ]},
+    ],
+    "shots_title": "So sieht es aus",
+    # (Datei, Bildunterschrift, Alternativtext) – Dateien in assets/screens/<lang>/watch-<Datei>.webp
+    "watch_shots": [
+        ("01-homeWindow", "10 Minuten live nach jeder Nachricht",
+         "Startbildschirm von Wristalk auf der Apple Watch: Live, noch 7 Minuten, darunter die Kontakte"),
+        ("02-receiving", "Nachrichten spielen sofort",
+         "Apple Watch spielt eine Nachricht von Kyra an die Familie über den Lautsprecher"),
+        ("03-channelTalking", "Halten zum Sprechen, loslassen zum Senden",
+         "Die Sprechtaste auf der Apple Watch während der Aufnahme mit 9-Sekunden-Zähler"),
+        ("04-missed", "Verpasste Nachrichten zum Nachhören",
+         "Liste verpasster Nachrichten von Kyra und Lena mit Abspieltasten"),
+        ("05-invite", "Einladen mit einem kurzen Code",
+         "Ein 8-stelliger Einladungscode mit der Taste zum Teilen über Nachrichten"),
+        ("06-approval", "Anfragen eines Kindes freigeben",
+         "Freigabe-Anfrage auf der Apple Watch: Lena möchte Mia als Kontakt hinzufügen, mit Erlauben und "
+         "Ablehnen"),
+        ("07-keepLive", "Wristalk live halten, mit Ausschalt-Timer",
+         "Schalter „Wristalk live halten“ mit Akkuschutz bei 20 % und automatischem Ausschalten um 22 Uhr"),
+    ],
+    "iphone_shots": [
+        ("01-talk", "Sprechen auf dem iPhone",
+         "Sprechen-Tab auf dem iPhone mit den Kontakten der Familie und großer Sprechtaste"),
+        ("02-people", "Familie und Kontakte",
+         "Personen-Tab mit den Familienmitgliedern und Kontakten aus anderen Familien"),
+        ("03-kids", "Kindersicherung für jedes Kind",
+         "Kindersicherung eines Kindes: Einladungen, Gruppen, erlaubte Zeiten und Zustellung"),
+        ("04-approvals", "Alle Freigaben an einem Ort",
+         "Freigaben-Tab mit einer offenen Kontaktanfrage und früheren Entscheidungen"),
+        ("05-privacy", "Ende-zu-Ende-verschlüsselt",
+         "Bildschirm zur Verschlüsselung: Wristalk kann nicht mithören"),
+        ("06-invite", "Einladen über Nachrichten oder QR-Code",
+         "Einladungsbildschirm mit Code, QR-Code und Taste zum Teilen über Nachrichten"),
+        ("07-groups", "Gruppen für jeden Anlass",
+         "Gruppen-Tab mit der Familie, einer Fußballgruppe und einer Kindergruppe"),
     ],
     "tiers_title": "Welche Apple Watch?",
     "tiers": [
         {"kind": "live", "title": "Live über den Lautsprecher",
-         "text": "Apple Watch SE (3. Generation), Series 10, 11 und 12, Ultra 2, 3 und 4. Nachrichten spielen von "
-                 "selbst über den Lautsprecher."},
+         "text": "Apple Watch SE (3. Generation), Series 10 und neuer, Ultra 2 und neuer. Nachrichten spielen "
+                 "von selbst über den Lautsprecher."},
         {"kind": "notify", "title": "Mitteilungen oder Kopfhörer",
          "text": "Andere Uhren mit watchOS 26, etwa Apple Watch SE (2. Generation) und Series 6 bis 8. Die ganze "
                  "App funktioniert; Nachrichten laufen live über Bluetooth-Kopfhörer, sonst tippen Sie zum "
@@ -76,8 +112,28 @@ HOME = {
         {"kind": "off", "title": "Nicht unterstützt",
          "text": "Uhren, auf denen watchOS 26 nicht läuft."},
     ],
-    "tiers_note": "Jede Uhr bzw. jedes iPhone braucht eine Internetverbindung (WLAN oder Mobilfunk). "
-                  "iPhone: iOS 26 oder neuer.",
+    "tiers_note": "Apple Watch: watchOS 26 oder neuer. iPhone: iOS 26 oder neuer. Jede Uhr bzw. jedes iPhone "
+                  "braucht eine Internetverbindung (WLAN oder Mobilfunk). Erhältlich im US-App-Store.",
+    "pricing": {
+        "title": "Ein Family Pass für alle",
+        "price": "19,99 $",
+        "per": " pro Jahr",
+        "trial": "Erste Woche gratis",
+        "sub": "Kostenlos laden. US-Preis; der App Store zeigt ihn an, bevor Sie bestätigen.",
+        "items": [
+            "Eine Person schließt das Abo ab. Die Familienfreigabe von Apple teilt den Family Pass mit Ihrer "
+            "Apple-Familie – auch mit den Uhren der Kinder.",
+            "Jede Familie braucht einen eigenen Family Pass, auch Verwandte und Freunde, mit denen Sie "
+            "sprechen und die zu einer anderen Familie gehören (siehe "
+            "<a href=\"%%TERMS%%\">Nutzungsbedingungen</a>).",
+            "Verlängert sich jedes Jahr automatisch. Kündigen Sie mindestens 24 Stunden vor der Verlängerung "
+            "in den Einstellungen Ihres Apple Accounts (Einstellungen → Ihr Name → Abonnements).",
+            "Neues iPhone oder neue Uhr? Tippen Sie im Family-Pass-Bildschirm auf „Käufe wiederherstellen“.",
+            "Endet er, zeigt Wristalk den Family-Pass-Bildschirm, und Ihre Familie kann nicht sprechen, bis "
+            "wieder jemand das Abo abschließt. Familie, Kontakte und Gruppen bleiben erhalten.",
+        ],
+        "more": "Mehr zum Family Pass",
+    },
     "help_title": "Fragen?",
     "help_text": 'Lesen Sie die <a href="%%SUPPORT%%">Support-Seite</a> oder schreiben Sie an %%EMAIL%%.',
 }
@@ -107,8 +163,8 @@ SUPPORT = {
              "<p>Die iPhone-App ist optional: Dort verwalten Sie bequem Personen, Gruppen und die Einstellungen "
              "der Kinder, aber alles funktioniert auch auf der Uhr.</p>"),
             ("Welche Apple Watch-Modelle werden unterstützt?",
-             "<ul><li><strong>Live über den Lautsprecher:</strong> Apple Watch SE (3. Generation), Series 10, 11 "
-             "und 12, Ultra 2, 3 und 4. Eingehende Nachrichten spielen von selbst, ohne zu tippen.</li>"
+             "<ul><li><strong>Live über den Lautsprecher:</strong> Apple Watch SE (3. Generation), Series 10 "
+             "und neuer, Ultra 2 und neuer. Eingehende Nachrichten spielen von selbst, ohne zu tippen.</li>"
              "<li><strong>Mit Mitteilungen oder Kopfhörern:</strong> Apple Watch SE (2. Generation), Series 6, 7 "
              "und 8 sowie andere Modelle mit watchOS 26. Die ganze App funktioniert. Nachrichten laufen live, "
              "solange Wristalk auf dem Bildschirm geöffnet ist oder Bluetooth-Kopfhörer verbunden sind; sonst "
@@ -119,6 +175,9 @@ SUPPORT = {
              "Familienkonfiguration. Installieren Sie Wristalk auf der Uhr aus dem App Store, melden Sie sich mit "
              "dem Apple Account des Kindes an und treten Sie mit einem Einladungscode Ihrer Familie bei. Die "
              "Einstellungen Ihres Kindes verwalten Sie auf Ihrem eigenen iPhone oder Ihrer Uhr.</p>"),
+            ("Wo ist Wristalk erhältlich?",
+             "<p>Wristalk ist im App Store in den USA erhältlich. Die App gibt es auf Englisch und "
+             "Deutsch.</p>"),
         ]},
         {"id": "people", "title": "Kontakte &amp; Freigaben", "faqs": [
             ("Wie lade ich jemanden ein?",
@@ -127,7 +186,9 @@ SUPPORT = {
              "ihn groß an, damit die andere Person ihn eintippen kann.</p>"
              "<p>Ein Code hat 8 Zeichen, gilt einmal und ist 48 Stunden gültig. Die andere Person öffnet den Link "
              "auf dem iPhone oder gibt den Code in Wristalk ein (auf der Uhr: <span class=\"kbd\">Code "
-             "eingeben</span> bzw. <span class=\"kbd\">Ich habe einen Code</span>).</p>"),
+             "eingeben</span> bzw. <span class=\"kbd\">Ich habe einen Code</span>).</p>"
+             "<p>Codes enthalten nie die Buchstaben O und I oder die Ziffern 0 und 1 – Sie können einen Code "
+             "also auch einfach vorlesen, etwa am Telefon.</p>"),
             ("Wie funktionieren Freigaben für Kinder?",
              "<p>Jedes Kind hat in Wristalk einen oder mehrere Verantwortliche – die Erwachsenen, die sich um "
              "seine Einstellungen kümmern. Möchte ein Kind jemanden einladen, eine Einladung annehmen oder eine "
@@ -144,6 +205,14 @@ SUPPORT = {
              "<p>Ja. Kontakte können aus anderen Familien kommen – Freunde, Großeltern, Nachbarn. Bei Kindern "
              "braucht jeder neue Kontakt die Freigabe eines Verantwortlichen, sofern dieser nichts anderes "
              "erlaubt hat.</p>"),
+            ("Wie verlasse oder wechsle ich die Familie?",
+             "<p>Erwachsene verlassen ihre Familie unter Einstellungen → <span class=\"kbd\">Familie "
+             "verlassen</span>, auf dem iPhone oder auf der Uhr. Um in eine andere Familie zu wechseln, nehmen "
+             "Sie eine Familieneinladung von ihr an; Wristalk fragt nach und wechselt dann für Sie.</p>"
+             "<p>Haben Sie den Family Pass gekauft, geht er mit Ihnen, und die Familie, die Sie verlassen, "
+             "braucht einen eigenen. Kinder können ihre Familie nicht verlassen – ein Verantwortlicher kann "
+             "stattdessen das Konto des Kindes löschen –, und der letzte Erwachsene einer Familie mit Kindern "
+             "kann sie nicht verlassen.</p>"),
         ]},
         {"id": "talking", "title": "Sprechen &amp; Zustellung", "faqs": [
             ("Wie spreche ich?",
@@ -151,6 +220,10 @@ SUPPORT = {
              "Sie und lassen Sie los. Ein kurzer Ton und ein Tippen am Handgelenk zeigen, dass Sie sprechen "
              "können. Es spricht immer nur eine Person; eine Nachricht dauert höchstens 30 Sekunden. Wenn Sie "
              "möchten, schalten Sie „Zum Sprechen tippen“ ein (einmal tippen zum Starten, einmal zum Beenden).</p>"),
+            ("Kann ich sprechen, ohne Wristalk vorher zu öffnen?",
+             "<p>Öffnen Sie auf der Apple Watch die Kurzbefehle-App und tippen Sie auf den Wristalk-Kurzbefehl "
+             "<span class=\"kbd\">Sprechen</span>. Wristalk öffnet Ihr letztes Gespräch und beginnt zu "
+             "senden; tippen Sie den Kurzbefehl erneut an, um die Nachricht abzuschicken.</p>"),
             ("Wie spielt eine Nachricht auf der Uhr von selbst?",
              "<p>Eine Nachricht kommt als Mitteilung an. Auf einer Uhr, die über ihren Lautsprecher abspielen "
              "kann, spielt die Mitteilung die Nachricht sofort ab – ohne zu tippen, auch bei gesenktem "
@@ -177,6 +250,11 @@ SUPPORT = {
              "Zeit gewählt hat). Hat jemand sie nicht rechtzeitig gehört, erhalten Sie eine Mitteilung, dass die "
              "Nachricht nicht angekommen ist, und die andere Person sieht im Gespräch einen Hinweis "
              "„verpasst“.</p>"),
+            ("Kann ich eine Nachricht stoppen oder verpasste löschen?",
+             "<p>Ja. Während eine Nachricht in Wristalk spielt, tippen Sie auf <span class=\"kbd\">Stopp</span>. "
+             "Verpasste Nachrichten stehen im Gespräch: Spielen Sie eine ab, wischen Sie sie zum Löschen weg "
+             "oder nutzen Sie <span class=\"kbd\">Alle löschen</span>. Eine gelöschte Nachricht verschwindet "
+             "auf all Ihren Geräten.</p>"),
             ("Was machen Akkuschutz und Ausschalt-Timer?",
              "<p>Live bleiben hält die Uhr empfangsbereit und braucht mehr Akku. Der "
              "<strong>Akkuschutz</strong> wechselt von automatischem Abspielen zu Mitteilungen, sobald der Akku "
@@ -186,30 +264,49 @@ SUPPORT = {
              "<p>Beides finden Sie in den Einstellungen der Uhr. Auf der Uhr eines Kindes legt ein "
              "Verantwortlicher den Akkuschutz fest (auf dem iPhone unter Kinder).</p>"),
         ]},
-        {"id": "pass", "title": "Family Pass", "faqs": [
+        {"id": "pass", "title": "Family Pass &amp; Preise", "faqs": [
             ("Was kostet Wristalk?",
              "<p>Wristalk ist kostenlos zu laden. Zum Sprechen braucht Ihre Familie den <strong>Family "
-             "Pass</strong>: Die erste Woche ist gratis, danach ist er ein Jahresabo, das sich automatisch "
-             "verlängert. Den Preis in Ihrer Währung zeigt der App Store an, bevor Sie bestätigen.</p>"),
-            ("Muss jedes Familienmitglied ihn kaufen?",
-             "<p>Nein. Der Family Pass unterstützt die Familienfreigabe von Apple – die Mitglieder Ihrer "
-             "Apple-Familie erhalten ihn, ohne ihn erneut zu kaufen (das Teilen von Abos muss in den "
-             "Einstellungen der Familienfreigabe aktiviert sein).</p>"),
+             "Pass</strong>, ein Jahresabo, das sich automatisch verlängert: <strong>19,99 $ pro Jahr</strong> "
+             "in den USA, die <strong>erste Woche gratis</strong> für neue Abonnenten. Der App Store zeigt den "
+             "Preis an, bevor Sie bestätigen, und Apple belastet Ihren Apple Account, wenn die Gratiswoche "
+             "endet.</p>"
+             "<p>Sie können den Family Pass in Wristalk bei der Einrichtung abschließen oder später unter "
+             "<span class=\"kbd\">Einstellungen → Familienpass</span> (auf der Uhr: Family Pass).</p>"),
+            ("Muss jedes Familienmitglied ein Abo abschließen?",
+             "<p>Nein – nur eine Person schließt das Abo ab. Der Family Pass unterstützt die Familienfreigabe "
+             "von Apple, damit erhalten alle in der Apple-Familie dieser Person ihn automatisch, auch die Uhren "
+             "der Kinder (das Teilen von Abos muss in den Einstellungen der Familienfreigabe aktiviert "
+             "sein).</p>"),
+            ("Brauchen Kontakte aus anderen Familien einen eigenen Family Pass?",
+             "<p>Ja. Jede Wristalk-Familie braucht einen eigenen Family Pass (oder dessen Gratiswoche) – auch "
+             "Großeltern, Verwandte oder Freunde, mit denen Sie sprechen und die zu einer anderen Familie "
+             "gehören. Die Familienfreigabe gilt nur für die eigene Apple-Familie der Person mit dem Abo. "
+             "Siehe Abschnitt 5 der <a href=\"%%TERMS%%\">Nutzungsbedingungen</a>.</p>"),
             ("Wie kündige ich das Abo?",
              "<p>Das Abo wird von Apple verwaltet. Öffnen Sie auf dem iPhone <span class=\"kbd\">Einstellungen → "
              "[Ihr Name] → Abonnements → Wristalk</span> und tippen Sie auf „Abo kündigen“ – oder in Wristalk "
              "auf dem iPhone auf <span class=\"kbd\">Einstellungen → Familienpass → Abo verwalten</span>.</p>"
              "<p>Kündigen Sie mindestens 24 Stunden vor der Verlängerung, damit das nächste Jahr nicht berechnet "
              "wird. Der Family Pass bleibt bis zum Ende des bezahlten Zeitraums aktiv. Nur die Person, die ihn "
-             "gekauft hat, kann ihn kündigen; das Löschen der App kündigt ihn nicht. Wenn Sie in der "
-             "Gratiswoche kündigen, kann der Zugang sofort enden.</p>"),
-            ("Kann ich mein Geld zurückbekommen?",
-             "<p>Da Apple alle Zahlungen abwickelt, kümmert sich Apple auch um Erstattungen. Beantragen Sie eine "
-             "Erstattung unter <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>.</p>"),
+             "gekauft hat, kann ihn kündigen; das Löschen der App oder Ihres Wristalk-Kontos kündigt ihn nicht. "
+             "Wenn Sie in der Gratiswoche kündigen, kann der Zugang sofort enden.</p>"),
+            ("Was passiert, wenn der Family Pass endet?",
+             "<p>Endet der Family Pass – weil er gekündigt wurde oder Apple ihn nicht verlängern konnte –, zeigt "
+             "Wristalk wieder den Family-Pass-Bildschirm, und Ihre Familie kann nicht sprechen, bis wieder "
+             "jemand aus der Familie das Abo abschließt. Familie, Kontakte, Gruppen und Einstellungen bleiben "
+             "erhalten.</p>"
+             "<p>Hat Apple ein Problem mit Ihrer Zahlung, zeigt Wristalk das unter Einstellungen → "
+             "Familienpass. Aktualisieren Sie Ihre Zahlungsmethode in Ihrem Apple Account, um den Family Pass "
+             "zu behalten.</p>"),
             ("Ich habe den Family Pass, aber Wristalk erkennt ihn nicht.",
              "<p>Prüfen Sie, dass Sie im App Store mit dem Apple Account angemeldet sind, der ihn gekauft hat "
              "(oder mit einem aus derselben Apple-Familie), und tippen Sie im Family-Pass-Bildschirm auf "
-             "<span class=\"kbd\">Käufe wiederherstellen</span>. Hilft das nicht, schreiben Sie uns.</p>"),
+             "<span class=\"kbd\">Käufe wiederherstellen</span> – etwa auf einem neuen iPhone. Hilft das "
+             "nicht, schreiben Sie uns.</p>"),
+            ("Kann ich mein Geld zurückbekommen?",
+             "<p>Da Apple alle Zahlungen abwickelt, kümmert sich Apple auch um Erstattungen. Beantragen Sie eine "
+             "Erstattung unter <a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>.</p>"),
         ]},
         {"id": "privacy", "title": "Datenschutz &amp; Sicherheit", "faqs": [
             ("Können Sie unsere Nachrichten anhören?",
@@ -240,6 +337,15 @@ SUPPORT = {
              "Meldungen werden 90 Tage aufbewahrt.</p>"
              "<p>Sie können eine Gruppe jederzeit verlassen, und Verantwortliche bestimmen, welche Kontakte ein "
              "Kind hat. Ist jemand in Gefahr, wenden Sie sich zuerst an den örtlichen Notruf.</p>"),
+            ("Wie blockiere ich jemanden?",
+             "<p>Öffnen Sie die Person – auf dem iPhone unter Personen, auf der Uhr in den Gesprächsdetails – "
+             "und wählen Sie <span class=\"kbd\">Blockieren</span>. Blockierte Personen können Sie nicht "
+             "einladen oder zu Gruppen hinzufügen, und in gemeinsamen Gruppen hören Sie sie nicht. Aufheben "
+             "lässt sich die Blockierung an derselben Stelle; der Kontakt wird dabei nicht "
+             "wiederhergestellt.</p>"
+             "<p>Verantwortliche können jemanden für ein Kind blockieren, und nur ein Verantwortlicher kann "
+             "diese Blockierung aufheben. <span class=\"kbd\">Melden …</span> finden Sie an derselben "
+             "Stelle.</p>"),
         ]},
     ],
 }

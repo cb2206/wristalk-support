@@ -8,17 +8,27 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f5f7f6" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://wristalk.app/de/privacy">
 <meta property="og:title" content="Wristalk — Datenschutzerklärung">
 <meta property="og:description" content="Wie Wristalk mit Ihren Daten umgeht: Ende-zu-Ende-verschlüsselte Sprache, wenige Daten, kein Tracking.">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="../assets/icon.png">
-<link rel="apple-touch-icon" href="../assets/icon.png">
-<link rel="alternate" hreflang="en" href="../privacy.html">
-<link rel="alternate" hreflang="de" href="privacy.html">
+<meta property="og:url" content="https://wristalk.app/de/privacy">
+<meta property="og:site_name" content="Wristalk">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://wristalk.app/assets/og-de.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wristalk-App-Symbol: eine Apple Watch mit Schallwellen. Walkie-Talkie für die Familie.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://wristalk.app/privacy">
+<link rel="alternate" hreflang="de" href="https://wristalk.app/de/privacy">
+<link rel="alternate" hreflang="x-default" href="https://wristalk.app/privacy">
 <!-- Site-wide values. The support address is generated from SUPPORT_EMAIL in _build/gen_pages.py (see README.md). -->
 <script>
 const SUPPORT_EMAIL = "hello@wristalk.app";
-const APP_STORE_URL = "[APP STORE LINK]";
 </script>
 <script>
 (function(){
@@ -75,7 +85,7 @@ const APP_STORE_URL = "[APP STORE LINK]";
   }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px;
     letter-spacing: -0.3px; color: var(--heading); text-decoration: none; }
-  .brand img { width: 30px; height: 30px; border-radius: 8px; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; box-shadow: 0 0 0 1px var(--line); }
   .navright { display: flex; align-items: center; gap: 6px; }
   .navlinks { display: none; gap: 4px; margin-right: 6px; }
   .navlinks a { font-weight: 600; font-size: 14px; text-decoration: none; padding: 6px 10px; border-radius: 999px; }
@@ -95,7 +105,8 @@ const APP_STORE_URL = "[APP STORE LINK]";
     letter-spacing: -1px; font-weight: 800; text-wrap: balance; }
   .hero .subtitle { margin: 0; font-size: 17px; }
   .page-hero .hero-inner { max-width: 760px; text-align: center; }
-  .page-hero .icon { width: 72px; height: 72px; border-radius: 17px; display: block; margin: 0 auto 16px; }
+  .page-hero .icon { width: 72px; height: 72px; border-radius: 17px; display: block; margin: 0 auto 16px;
+    box-shadow: 0 0 0 1px var(--line); }
 
   .home-hero .hero-inner { display: grid; gap: 36px; align-items: center; }
   .eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
@@ -112,19 +123,12 @@ const APP_STORE_URL = "[APP STORE LINK]";
   .cta .textlink { font-weight: 700; }
   .fineprint { font-size: 14px; color: var(--faint); margin: 16px 0 0; }
 
-  .watch { justify-self: center; width: 220px; height: 262px; border-radius: 58px; background: #000;
+  .watch { justify-self: center; width: 220px; height: 266px; border-radius: 58px; background: #000;
     border: 9px solid #2a2d2c; box-shadow: 0 30px 60px rgba(0,0,0,0.35), inset 0 0 0 1px #3a3d3c;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-    color: #fff; position: relative; }
+    position: relative; }
   .watch::after { content: ""; position: absolute; right: -16px; top: 70px; width: 8px; height: 38px;
     border-radius: 4px; background: #2a2d2c; }
-  .watch .who { font-weight: 700; font-size: 17px; display: flex; align-items: center; gap: 7px; }
-  .watch .dot { width: 9px; height: 9px; border-radius: 50%; background: #5ad2b4; box-shadow: 0 0 10px #5ad2b4; }
-  .watch .ptt { width: 112px; height: 112px; border-radius: 50%; background: #5ad2b4;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 0 10px rgba(90,210,180,0.16), 0 0 0 22px rgba(90,210,180,0.07); }
-  .watch .ptt svg { width: 44px; height: 44px; fill: #000; }
-  .watch .hint { font-size: 12px; color: #8e8e93; font-weight: 600; }
+  .watch img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 49px; }
 
   main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 56px; }
   main.narrow { max-width: 760px; }
@@ -132,7 +136,7 @@ const APP_STORE_URL = "[APP STORE LINK]";
 
   .band { font-size: 18px; color: var(--heading); text-align: center; max-width: 820px;
     margin: 8px auto 36px; text-wrap: pretty; }
-  .features { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .features { display: grid; gap: 16px; grid-template-columns: 1fr; }
   .card { background: var(--surface); border: 1px solid var(--card-border); border-radius: 20px;
     padding: 22px 20px; box-shadow: var(--card-shadow); }
   .feature h2 { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
@@ -152,6 +156,32 @@ const APP_STORE_URL = "[APP STORE LINK]";
   .badge.notify { background: var(--orange-fill); }
   .badge.off { background: #8e8e93; }
   .tiers-note { text-align: center; font-size: 14px; color: var(--faint); margin: 14px 0 0; }
+
+  .shots-h { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--accent); margin: 26px 0 12px; }
+  .shots { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none;
+    margin: 0 -16px; padding: 4px 16px 18px; scroll-padding-inline: 16px; scrollbar-width: thin; }
+  .shots li { flex: none; scroll-snap-align: start; margin: 0; }
+  .shots figure { margin: 0; text-align: center; }
+  .shots img { display: block; height: auto; background: #000; }
+  .shots.watch-shots img { width: 168px; border-radius: 38px; border: 7px solid #2a2d2c; }
+  .shots.phone-shots img { width: 190px; border-radius: 26px; border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow); }
+  .shots figcaption { font-size: 14px; font-weight: 600; color: var(--heading); margin: 10px auto 0;
+    max-width: 180px; line-height: 1.35; }
+
+  .pricing { display: grid; gap: 20px; }
+  .price-plan { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 6px; }
+  .price { font-size: 44px; font-weight: 800; letter-spacing: -1px; color: var(--heading); line-height: 1.1; margin: 0; }
+  .price span { font-size: 18px; font-weight: 700; letter-spacing: 0; color: var(--body); }
+  .price-trial { display: inline-block; margin: 10px 0 12px; font-size: 14px; font-weight: 700; color: var(--link);
+    background: var(--chip-bg); border: 1px solid var(--chip-border); border-radius: 999px; padding: 4px 12px; }
+  .price-sub { margin: 0; font-size: 14px; color: var(--faint); }
+  .pricing ul { list-style: none; margin: 0; padding: 0; }
+  .pricing li { position: relative; padding: 0 0 12px 26px; font-size: 15px; }
+  .pricing li::before { content: "✓"; position: absolute; left: 0; top: 0; font-weight: 800; color: var(--accent); }
+  .pricing .more { margin: 4px 0 0; font-weight: 700; font-size: 15px; }
 
   .helpbox { margin-top: 40px; text-align: center; }
   .helpbox p { margin: 0 0 6px; }
@@ -196,6 +226,9 @@ const APP_STORE_URL = "[APP STORE LINK]";
     .hero h1 { font-size: 42px; }
     .home-hero .hero-inner { grid-template-columns: 1.3fr 1fr; }
     .home-hero h1 { font-size: 52px; letter-spacing: -1.6px; }
+    .features { grid-template-columns: 1fr 1fr; }
+    .pricing { grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+    .shots { margin: 0; padding: 4px 0 18px; scroll-padding-inline: 0; }
     main { padding: 40px 28px 64px; }
     .card { padding: 26px 28px; }
   }
@@ -378,14 +411,6 @@ ist die englische Fassung maßgeblich, soweit gesetzlich zulässig.</p>
   for (var i = 0; i < links.length; i++) {
     links[i].href = "mailto:" + SUPPORT_EMAIL;
     if (!links[i].hasAttribute("data-keep-text")) links[i].textContent = SUPPORT_EMAIL;
-  }
-  var badges = document.querySelectorAll("[data-appstore]");
-  for (var j = 0; j < badges.length; j++) {
-    var b = badges[j];
-    if (/^\[/.test(APP_STORE_URL)) {
-      b.removeAttribute("href"); b.setAttribute("aria-disabled", "true"); b.classList.add("soon");
-      var s = b.querySelector(".small"); if (s) s.textContent = b.getAttribute("data-soon");
-    } else { b.href = APP_STORE_URL; }
   }
   var t = document.getElementById("theme-toggle");
   function icon() { t.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀" : "☾"; }

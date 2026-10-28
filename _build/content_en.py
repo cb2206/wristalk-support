@@ -6,12 +6,14 @@ THEME_LABEL = "Switch light / dark appearance"
 NAV = {"home": "Wristalk", "support": "Support", "privacy": "Privacy", "terms": "Terms"}
 BACK_HOME = "← Back to Wristalk"
 BACK_SUPPORT = "← Back to Support"
+OG_LOCALE = "en_US"
+OG_IMAGE_ALT = "Wristalk app icon: an Apple Watch with sound waves. Walkie-talkie for your family."
 
 # ---------------------------------------------------------------------------
 HOME = {
     "title": "Wristalk — Walkie-talkie for your family",
-    "description": "Live push-to-talk for families on Apple Watch and iPhone. Works on kids' Family Setup watches "
-                   "without an iPhone. Parental controls, end-to-end encrypted.",
+    "description": "Push-to-talk for families on Apple Watch and iPhone. Works on kids' Family Setup watches "
+                   "without an iPhone. Parental controls, end-to-end encrypted. Free download.",
     "eyebrow": "For Apple Watch and iPhone",
     "h1": "The walkie-talkie is back on your wrist.",
     "tagline": "Hold the talk button and speak. On your family's watches your voice plays right away, no tap "
@@ -19,54 +21,85 @@ HOME = {
     "badge_small": "Download on the",
     "badge_soon": "Coming soon to the",
     "help_link": "Help &amp; FAQ",
-    "fineprint": "Free to download. Try the Family Pass free for one week, then it renews yearly.",
-    "watch_alt": "Illustration of an Apple Watch showing a large talk button",
-    "watch_name": "Mum",
-    "watch_hint": "Hold to talk",
+    "fineprint": "Free to download from the US App Store. Family Pass: 1 week free, then $19.99/year. "
+                 "Requires watchOS 26 or iOS 26.",
+    "watch_alt": "Wristalk on Apple Watch: Kyra is talking to the family, playing through the speaker",
     "band": "Made for families: kids' Apple Watch with Family Setup work without an iPhone of their own, and "
             "parents decide who a child can talk to.",
     "features": [
         {"title": "Made for families", "items": [
             "Works on kids' Apple Watch with Family Setup — no iPhone of their own needed.",
-            "Parents decide who a child can talk to. New contacts and groups need a parent's approval, and "
-            "parents can change their mind at any time.",
+            "Parents decide who a child can talk to. New contacts and groups need a guardian's approval, and "
+            "guardians set the hours when messages may play.",
             "Talk one-to-one or in groups: the whole family, just the kids, grandparents, or friends from "
             "another family.",
+            "Invite people via Messages, with a QR code, or by reading out a short code. Adults can leave or "
+            "switch family at any time.",
         ]},
         {"title": "Live when it matters", "items": [
-            "A message plays by itself as soon as it arrives on a supported watch — no tap, even with the "
+            "On a supported watch a message plays by itself as soon as it arrives — no tap, even with the "
             "wrist down.",
             "After each message Wristalk stays live for 10 minutes, so replies come through instantly. Then it "
             "goes quiet again and saves battery.",
-            "Want it live all day? Turn on Keep Wristalk live, with an auto-off timer and a battery guard for "
-            "kids' watches.",
-            "On other watches, Wristalk plays through Bluetooth headphones, or shows a notification you tap to "
-            "listen.",
+            "Want it live all day? Turn on Keep Wristalk live, with auto-off after 1, 2 or 4 hours or tonight, "
+            "and a battery guard.",
+            "Nothing plays during Do Not Disturb or Sleep — you see what you missed. Stop a message while it "
+            "plays, and delete missed ones.",
         ]},
         {"title": "Private by design", "items": [
             "Every voice message is end-to-end encrypted. Only the people in the conversation can hear it — "
             "not us, not anyone else.",
-            "Messages disappear once they have been played, or after 10 minutes at the latest. If someone "
+            "Messages are deleted once they have been played, or after 10 minutes at the latest. If someone "
             "missed you, you're told.",
+            "Report or block anyone who bothers you; guardians can do it for their children.",
             "Sign in with Apple. No email address, no phone number, no ads, no tracking.",
         ]},
         {"title": "On iPhone, too", "items": [
-            "The iPhone app is the comfortable place to manage people, groups and kids' settings.",
-            "It is a walkie-talkie of its own, with the system Push to Talk controls — so parents without a "
-            "watch can talk too.",
-            "Invite people with a code via Messages or a QR code.",
+            "The iPhone app is the comfortable place to manage people, groups and kids' settings, and to "
+            "approve requests.",
+            "It is a walkie-talkie of its own, with Apple's system Push to Talk — messages play even while "
+            "Wristalk is closed.",
+            "So parents without an Apple Watch can talk with the family too.",
         ]},
-        {"title": "One pass for the whole family", "items": [
-            "Free to download, with one week of the Family Pass free.",
-            "After that, the Family Pass is a yearly subscription, billed by Apple.",
-            "It is shared with your Apple family through Family Sharing, and you can cancel any time in your "
-            "App Store settings.",
-        ]},
+    ],
+    "shots_title": "See it in action",
+    # (file, caption, alt text) — files in assets/screens/<lang>/watch-<file>.webp
+    "watch_shots": [
+        ("01-homeWindow", "Live for 10 minutes after each talk",
+         "Wristalk home screen on Apple Watch showing Live, 7 minutes left, and the contact list"),
+        ("02-receiving", "Messages play right away",
+         "Apple Watch playing a message from Kyra to the family through the speaker"),
+        ("03-channelTalking", "Hold to talk, release to send",
+         "The talk button on Apple Watch while recording, with a 9-second timer"),
+        ("04-missed", "Missed messages, ready to play",
+         "List of missed messages from Kyra and Lena with Play buttons"),
+        ("05-invite", "Invite with a short code",
+         "An 8-character invite code with a Share via Messages button"),
+        ("06-approval", "Approve a child's request",
+         "Approval request on Apple Watch: Lena wants to add Mia as a contact, with Approve and Deny"),
+        ("07-keepLive", "Keep Wristalk live, with auto-off",
+         "Keep Wristalk live switch with battery guard at 20 % and auto-off at 10 pm"),
+    ],
+    "iphone_shots": [
+        ("01-talk", "Talk from your iPhone",
+         "Talk tab on iPhone with the family's contacts and a large talk button"),
+        ("02-people", "Your family and contacts",
+         "People tab listing the family members and contacts in other families"),
+        ("03-kids", "Parental controls for each child",
+         "A child's parental controls: invites, groups, allowed hours and delivery"),
+        ("04-approvals", "Approvals in one place",
+         "Approvals tab with a pending contact request and earlier decisions"),
+        ("05-privacy", "End-to-end encrypted",
+         "Encryption screen explaining that Wristalk cannot listen"),
+        ("06-invite", "Invite via Messages or QR code",
+         "Invite screen with a code, a QR code and a Share via Messages button"),
+        ("07-groups", "Groups for every occasion",
+         "Groups tab with the family, a football group and a kids' group"),
     ],
     "tiers_title": "Which Apple Watch?",
     "tiers": [
         {"kind": "live", "title": "Live through the speaker",
-         "text": "Apple Watch SE (3rd generation), Series 10, 11 and 12, Ultra 2, 3 and 4. Messages play by "
+         "text": "Apple Watch SE (3rd generation), Series 10 and later, Ultra 2 and later. Messages play by "
                  "themselves through the speaker."},
         {"kind": "notify", "title": "Notifications or headphones",
          "text": "Other watches with watchOS 26, such as Apple Watch SE (2nd generation) and Series 6 to 8. "
@@ -75,7 +108,27 @@ HOME = {
         {"kind": "off", "title": "Not supported",
          "text": "Watches that can't run watchOS 26."},
     ],
-    "tiers_note": "Each watch or iPhone needs an internet connection (Wi-Fi or cellular). iPhone: iOS 26 or later.",
+    "tiers_note": "Apple Watch: watchOS 26 or later. iPhone: iOS 26 or later. Each watch or iPhone needs an "
+                  "internet connection (Wi-Fi or cellular). Available in the US App Store.",
+    "pricing": {
+        "title": "One Family Pass for everyone",
+        "price": "$19.99",
+        "per": "/year",
+        "trial": "First week free",
+        "sub": "Free to download. US price; the App Store shows it before you confirm.",
+        "items": [
+            "One person subscribes. Apple Family Sharing shares the Family Pass with your Apple family — "
+            "kids' watches included.",
+            "Each family needs its own Family Pass, including relatives and friends you talk with who are in "
+            "another family (see the <a href=\"%%TERMS%%\">Terms</a>).",
+            "Renews automatically every year. Cancel at least 24 hours before renewal in your Apple Account "
+            "settings (Settings → your name → Subscriptions).",
+            "New iPhone or watch? Tap Restore purchases on the Family Pass screen.",
+            "If it ends, Wristalk shows the Family Pass screen and your family can't talk until someone "
+            "subscribes again. Your family, contacts and groups stay.",
+        ],
+        "more": "More about the Family Pass",
+    },
     "help_title": "Questions?",
     "help_text": 'Read the <a href="%%SUPPORT%%">support page</a> or write to %%EMAIL%%.',
 }
@@ -105,8 +158,8 @@ SUPPORT = {
              "<p>The iPhone app is optional: it's the comfortable place to manage people, groups and kids' "
              "settings, but everything also works on the watch.</p>"),
             ("Which Apple Watch models are supported?",
-             "<ul><li><strong>Live through the speaker:</strong> Apple Watch SE (3rd generation), Series 10, "
-             "11 and 12, Ultra 2, 3 and 4. Incoming messages play by themselves, no tap needed.</li>"
+             "<ul><li><strong>Live through the speaker:</strong> Apple Watch SE (3rd generation), Series 10 "
+             "and later, Ultra 2 and later. Incoming messages play by themselves, no tap needed.</li>"
              "<li><strong>With notifications or headphones:</strong> Apple Watch SE (2nd generation), "
              "Series 6, 7 and 8, and other models that run watchOS 26. The full app works. Messages play "
              "live while Wristalk is open on screen, or with Bluetooth headphones connected; otherwise you "
@@ -117,6 +170,9 @@ SUPPORT = {
              "Install Wristalk from the App Store on the watch, sign in with the child's Apple Account, and "
              "join your family with an invite code. You manage your child's settings from your own iPhone "
              "or watch.</p>"),
+            ("Where is Wristalk available?",
+             "<p>Wristalk is available in the App Store in the United States. The app is in English and "
+             "German.</p>"),
         ]},
         {"id": "people", "title": "Contacts &amp; approvals", "faqs": [
             ("How do I invite someone?",
@@ -125,7 +181,9 @@ SUPPORT = {
              "other person can type it in.</p>"
              "<p>A code has 8 characters, works once and is valid for 48 hours. The other person opens the "
              "link on their iPhone or enters the code in Wristalk (on the watch: <span class=\"kbd\">Enter "
-             "code</span> or <span class=\"kbd\">I have a code</span>).</p>"),
+             "code</span> or <span class=\"kbd\">I have a code</span>).</p>"
+             "<p>Codes never contain the letters O and I or the digits 0 and 1, so you can also just read a "
+             "code out, for example on the phone.</p>"),
             ("How do approvals work for children?",
              "<p>Every child in Wristalk has one or more guardians — the adults who look after their "
              "settings. By default, when a child wants to invite someone, accept an invite or create a "
@@ -142,12 +200,23 @@ SUPPORT = {
              "<p>Yes. Contacts can come from other families — friends, grandparents, neighbours. For "
              "children, each new contact needs a guardian's approval unless the guardian has allowed "
              "otherwise.</p>"),
+            ("How do I leave or switch family?",
+             "<p>Adults can leave their family in Settings → <span class=\"kbd\">Leave family</span>, on "
+             "iPhone or on the watch. To move to another family, accept a family invite from it; Wristalk asks "
+             "you to confirm and then switches for you.</p>"
+             "<p>If you bought the Family Pass, it goes with you, and the family you leave needs its own. "
+             "Children can't leave their family — a guardian can delete the child's account instead — and the "
+             "last adult of a family with children can't leave it.</p>"),
         ]},
         {"id": "talking", "title": "Talking &amp; delivery", "faqs": [
             ("How do I talk?",
              "<p>Open a contact or group, hold the big talk button, speak, and let go. A short sound and "
              "haptic tell you when you can speak. One person talks at a time; a talk lasts up to 30 seconds. "
              "If you prefer, turn on tap to talk (tap once to start, once to stop).</p>"),
+            ("Can I start talking without opening Wristalk first?",
+             "<p>On Apple Watch, open the Shortcuts app and tap Wristalk's <span class=\"kbd\">Talk</span> "
+             "shortcut. Wristalk opens your last conversation and starts talking; tap the shortcut again to "
+             "send.</p>"),
             ("How does a message play on the watch by itself?",
              "<p>A message arrives as a notification. On a watch that can play through its speaker, the "
              "notification plays the message right away — no tap, even with the wrist down. Wristalk then stays "
@@ -170,6 +239,10 @@ SUPPORT = {
              "(or 1 hour or 24 hours, if the person who created the group chose a longer time). If someone "
              "didn't hear it in time, you get a notification that they didn't hear your message, and they "
              "see a “missed” marker in the conversation.</p>"),
+            ("Can I stop a message or delete missed ones?",
+             "<p>Yes. While a message plays in Wristalk, tap <span class=\"kbd\">Stop</span>. Missed messages "
+             "are listed in the conversation: play one, swipe it away to delete it, or use "
+             "<span class=\"kbd\">Delete all</span>. A deleted message disappears from all your devices.</p>"),
             ("What do the battery guard and auto-off timer do?",
              "<p>Staying live keeps the watch listening, which uses more battery. The "
              "<strong>battery guard</strong> switches from auto-play to notifications when the battery drops "
@@ -178,30 +251,44 @@ SUPPORT = {
              "<p>You find both in the watch's Settings. On a child's watch, the guardian sets the battery "
              "guard (on iPhone under Kids).</p>"),
         ]},
-        {"id": "pass", "title": "Family Pass", "faqs": [
+        {"id": "pass", "title": "Family Pass &amp; pricing", "faqs": [
             ("How much does Wristalk cost?",
-             "<p>Wristalk is free to download. To talk, your family needs the <strong>Family Pass</strong>: "
-             "the first week is free, then it's a yearly subscription that renews automatically. The price "
-             "is shown in the App Store in your currency before you confirm.</p>"),
-            ("Does everyone in the family have to buy it?",
-             "<p>No. The Family Pass supports Apple's Family Sharing, so the members of your Apple family "
-             "group get it without buying it again (subscription sharing must be turned on in your Family "
-             "Sharing settings).</p>"),
+             "<p>Wristalk is free to download. To talk, your family needs the <strong>Family Pass</strong>, an "
+             "auto-renewing yearly subscription: <strong>$19.99 per year</strong> in the US, with the "
+             "<strong>first week free</strong> for new subscribers. The App Store shows the price before you "
+             "confirm, and Apple charges your Apple Account when the free week ends.</p>"
+             "<p>You can start the Family Pass in Wristalk during setup, or later under "
+             "<span class=\"kbd\">Settings → Family Pass</span>.</p>"),
+            ("Does everyone in the family have to subscribe?",
+             "<p>No — only one person subscribes. The Family Pass supports Apple's Family Sharing, so everyone "
+             "in the subscriber's Apple family gets it automatically, kids' watches included (subscription "
+             "sharing must be turned on in your Family Sharing settings).</p>"),
+            ("Do contacts in other families need their own Family Pass?",
+             "<p>Yes. Each Wristalk family needs its own Family Pass (or its free week) — that includes "
+             "grandparents, relatives or friends you talk with who are in another family. Family Sharing only "
+             "covers the subscriber's own Apple family. See section 5 of the <a href=\"%%TERMS%%\">Terms of "
+             "Use</a>.</p>"),
             ("How do I cancel the subscription?",
              "<p>Apple handles the subscription. On iPhone, open <span class=\"kbd\">Settings → [your name] → "
              "Subscriptions → Wristalk</span> and tap Cancel Subscription — or in Wristalk on iPhone, go to "
              "<span class=\"kbd\">Settings → Family Pass → Manage subscription</span>.</p>"
              "<p>Cancel at least 24 hours before the renewal date to avoid being charged for the next year. "
              "You keep the Family Pass until the end of the period you paid for. Only the person who bought "
-             "it can cancel it, and deleting the app does not cancel it. If you cancel during the free week, "
-             "access may end right away.</p>"),
-            ("Can I get a refund?",
-             "<p>Because Apple processes all payments, refunds are handled by Apple. Request one at "
-             "<a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>.</p>"),
+             "it can cancel it, and deleting the app or your Wristalk account does not cancel it. If you "
+             "cancel during the free week, access may end right away.</p>"),
+            ("What happens when the Family Pass ends?",
+             "<p>When the Family Pass ends — because it was cancelled, or because Apple couldn't renew it — "
+             "Wristalk shows the Family Pass screen again, and your family can't talk until someone in the "
+             "family subscribes again. Your family, contacts, groups and settings stay.</p>"
+             "<p>If Apple has a problem with your payment, Wristalk shows it under Settings → Family Pass. "
+             "Update your payment method in your Apple Account to keep the Family Pass.</p>"),
             ("I have the Family Pass, but Wristalk doesn't recognise it.",
              "<p>Make sure you're signed in to the App Store with the Apple Account that bought it (or one in "
              "the same Apple family), then tap <span class=\"kbd\">Restore purchases</span> on the Family "
-             "Pass screen. If that doesn't help, email us.</p>"),
+             "Pass screen — for example on a new iPhone. If that doesn't help, email us.</p>"),
+            ("Can I get a refund?",
+             "<p>Because Apple processes all payments, refunds are handled by Apple. Request one at "
+             "<a href=\"https://reportaproblem.apple.com\">reportaproblem.apple.com</a>.</p>"),
         ]},
         {"id": "privacy", "title": "Privacy &amp; safety", "faqs": [
             ("Can you listen to our messages?",
@@ -230,6 +317,13 @@ SUPPORT = {
              "whom and when). We review every report within 24 hours. Reports are kept for 90 days.</p>"
              "<p>You can leave a group at any time, and guardians decide which contacts a child has. If "
              "someone is in danger, contact your local emergency services first.</p>"),
+            ("How do I block someone?",
+             "<p>Open the person — on iPhone under People, on the watch in the conversation details — and "
+             "choose <span class=\"kbd\">Block</span>. Blocked people can't invite you or add you to groups, "
+             "and you don't hear them in groups you share. Unblocking works in the same place; the contact "
+             "isn't restored automatically.</p>"
+             "<p>Guardians can block someone for a child, and only a guardian can lift that block. "
+             "<span class=\"kbd\">Report…</span> is in the same place.</p>"),
         ]},
     ],
 }

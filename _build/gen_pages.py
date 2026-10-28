@@ -25,7 +25,9 @@ import content_en  # noqa: E402
 # Site-wide values. Change them here and re-run the script.
 # ---------------------------------------------------------------------------
 SUPPORT_EMAIL = "hello@wristalk.app"         # Cloudflare Email Routing → owner inbox (2026-10-06)
-APP_STORE_URL = "[APP STORE LINK]"           # App Store product URL once the app is live
+SITE_URL = "https://wristalk.app"            # absolute URLs for canonical, hreflang and Open Graph tags
+APP_STORE_URL = "https://apps.apple.com/us/app/wristalk/id6816532048"
+APP_STORE_LIVE = False                       # True once the app is live: the "Coming soon" badge becomes a link
 COMPANY = "CB Group LLC"
 COMPANY_ADDRESS = "1500 N Grant St, Ste #10470, Denver, CO 80203, USA"
 # Governing law and venue, as it reads inside a sentence in each language.
@@ -42,6 +44,13 @@ LANG_NAME = {"en": "English", "de": "Deutsch"}
 
 def out_path(lang, page):
     return LANGS[lang] + PAGES[page]
+
+
+def public_url(lang, page):
+    """Absolute URL a page is served at (the worker maps /terms → terms.html, /support/ → support/index.html)."""
+    path = out_path(lang, page)
+    path = path[:-len("index.html")] if path.endswith("index.html") else path[:-len(".html")]
+    return f"{SITE_URL}/{path}"
 
 
 def rel(from_file, to_file):
@@ -95,7 +104,7 @@ CSS = r"""
   }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px;
     letter-spacing: -0.3px; color: var(--heading); text-decoration: none; }
-  .brand img { width: 30px; height: 30px; border-radius: 8px; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; box-shadow: 0 0 0 1px var(--line); }
   .navright { display: flex; align-items: center; gap: 6px; }
   .navlinks { display: none; gap: 4px; margin-right: 6px; }
   .navlinks a { font-weight: 600; font-size: 14px; text-decoration: none; padding: 6px 10px; border-radius: 999px; }
@@ -115,7 +124,8 @@ CSS = r"""
     letter-spacing: -1px; font-weight: 800; text-wrap: balance; }
   .hero .subtitle { margin: 0; font-size: 17px; }
   .page-hero .hero-inner { max-width: 760px; text-align: center; }
-  .page-hero .icon { width: 72px; height: 72px; border-radius: 17px; display: block; margin: 0 auto 16px; }
+  .page-hero .icon { width: 72px; height: 72px; border-radius: 17px; display: block; margin: 0 auto 16px;
+    box-shadow: 0 0 0 1px var(--line); }
 
   .home-hero .hero-inner { display: grid; gap: 36px; align-items: center; }
   .eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
@@ -132,19 +142,12 @@ CSS = r"""
   .cta .textlink { font-weight: 700; }
   .fineprint { font-size: 14px; color: var(--faint); margin: 16px 0 0; }
 
-  .watch { justify-self: center; width: 220px; height: 262px; border-radius: 58px; background: #000;
+  .watch { justify-self: center; width: 220px; height: 266px; border-radius: 58px; background: #000;
     border: 9px solid #2a2d2c; box-shadow: 0 30px 60px rgba(0,0,0,0.35), inset 0 0 0 1px #3a3d3c;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-    color: #fff; position: relative; }
+    position: relative; }
   .watch::after { content: ""; position: absolute; right: -16px; top: 70px; width: 8px; height: 38px;
     border-radius: 4px; background: #2a2d2c; }
-  .watch .who { font-weight: 700; font-size: 17px; display: flex; align-items: center; gap: 7px; }
-  .watch .dot { width: 9px; height: 9px; border-radius: 50%; background: #5ad2b4; box-shadow: 0 0 10px #5ad2b4; }
-  .watch .ptt { width: 112px; height: 112px; border-radius: 50%; background: #5ad2b4;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 0 10px rgba(90,210,180,0.16), 0 0 0 22px rgba(90,210,180,0.07); }
-  .watch .ptt svg { width: 44px; height: 44px; fill: #000; }
-  .watch .hint { font-size: 12px; color: #8e8e93; font-weight: 600; }
+  .watch img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 49px; }
 
   main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 56px; }
   main.narrow { max-width: 760px; }
@@ -152,7 +155,7 @@ CSS = r"""
 
   .band { font-size: 18px; color: var(--heading); text-align: center; max-width: 820px;
     margin: 8px auto 36px; text-wrap: pretty; }
-  .features { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .features { display: grid; gap: 16px; grid-template-columns: 1fr; }
   .card { background: var(--surface); border: 1px solid var(--card-border); border-radius: 20px;
     padding: 22px 20px; box-shadow: var(--card-shadow); }
   .feature h2 { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
@@ -172,6 +175,32 @@ CSS = r"""
   .badge.notify { background: var(--orange-fill); }
   .badge.off { background: #8e8e93; }
   .tiers-note { text-align: center; font-size: 14px; color: var(--faint); margin: 14px 0 0; }
+
+  .shots-h { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--accent); margin: 26px 0 12px; }
+  .shots { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none;
+    margin: 0 -16px; padding: 4px 16px 18px; scroll-padding-inline: 16px; scrollbar-width: thin; }
+  .shots li { flex: none; scroll-snap-align: start; margin: 0; }
+  .shots figure { margin: 0; text-align: center; }
+  .shots img { display: block; height: auto; background: #000; }
+  .shots.watch-shots img { width: 168px; border-radius: 38px; border: 7px solid #2a2d2c; }
+  .shots.phone-shots img { width: 190px; border-radius: 26px; border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow); }
+  .shots figcaption { font-size: 14px; font-weight: 600; color: var(--heading); margin: 10px auto 0;
+    max-width: 180px; line-height: 1.35; }
+
+  .pricing { display: grid; gap: 20px; }
+  .price-plan { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 6px; }
+  .price { font-size: 44px; font-weight: 800; letter-spacing: -1px; color: var(--heading); line-height: 1.1; margin: 0; }
+  .price span { font-size: 18px; font-weight: 700; letter-spacing: 0; color: var(--body); }
+  .price-trial { display: inline-block; margin: 10px 0 12px; font-size: 14px; font-weight: 700; color: var(--link);
+    background: var(--chip-bg); border: 1px solid var(--chip-border); border-radius: 999px; padding: 4px 12px; }
+  .price-sub { margin: 0; font-size: 14px; color: var(--faint); }
+  .pricing ul { list-style: none; margin: 0; padding: 0; }
+  .pricing li { position: relative; padding: 0 0 12px 26px; font-size: 15px; }
+  .pricing li::before { content: "✓"; position: absolute; left: 0; top: 0; font-weight: 800; color: var(--accent); }
+  .pricing .more { margin: 4px 0 0; font-weight: 700; font-size: 15px; }
 
   .helpbox { margin-top: 40px; text-align: center; }
   .helpbox p { margin: 0 0 6px; }
@@ -216,6 +245,9 @@ CSS = r"""
     .hero h1 { font-size: 42px; }
     .home-hero .hero-inner { grid-template-columns: 1.3fr 1fr; }
     .home-hero h1 { font-size: 52px; letter-spacing: -1.6px; }
+    .features { grid-template-columns: 1fr 1fr; }
+    .pricing { grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+    .shots { margin: 0; padding: 4px 0 18px; scroll-padding-inline: 0; }
     main { padding: 40px 28px 64px; }
     .card { padding: 26px 28px; }
   }
@@ -236,8 +268,6 @@ APPLE_LOGO = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c
               ' 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23'
               '-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.84c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67'
               '-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>')
-MIC = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7'
-       ' 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>')
 
 
 def email_link(cls="", keep_text=None):
@@ -246,6 +276,15 @@ def email_link(cls="", keep_text=None):
     if keep_text:
         return f'<a{c} data-email data-keep-text href="mailto:{SUPPORT_EMAIL}">{keep_text}</a>'
     return f'<a{c} data-email href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a>'
+
+
+def store_badge(h):
+    """App Store badge: a link once APP_STORE_LIVE is set, until then a "Coming soon" label without a link."""
+    if APP_STORE_LIVE:
+        return (f'<a class="storebadge" href="{APP_STORE_URL}">{APPLE_LOGO}<span><span class="small">'
+                f'{h["badge_small"]}</span><span class="big">App Store</span></span></a>')
+    return (f'<span class="storebadge soon">{APPLE_LOGO}<span><span class="small">{h["badge_soon"]}</span>'
+            f'<span class="big">App Store</span></span></span>')
 
 
 def fill(html, lang, page):
@@ -272,6 +311,7 @@ def page_html(lang, page, title, description, body):
     c = CONTENT[lang]
     here = out_path(lang, page)
     icon = rel(here, "assets/icon.png")
+    url = public_url(lang, page)
     other = "de" if lang == "en" else "en"
     nav_links = "".join(
         f'<a href="{rel(here, out_path(lang, p))}"{" aria-current=\"page\"" if p == page else ""}>{c.NAV[p]}</a>'
@@ -280,7 +320,8 @@ def page_html(lang, page, title, description, body):
         (f'<a href="{rel(here, out_path(lang, p))}">{c.NAV[p]}</a>' if p != page else f'<span>{c.NAV[p]}</span>')
         for p in ("home", "support", "privacy", "terms"))
     alternates = "".join(
-        f'\n<link rel="alternate" hreflang="{l}" href="{rel(here, out_path(l, page))}">' for l in LANGS)
+        f'\n<link rel="alternate" hreflang="{l}" href="{public_url(l, page)}">' for l in LANGS)
+    alternates += f'\n<link rel="alternate" hreflang="x-default" href="{public_url("en", page)}">'
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -291,15 +332,24 @@ def page_html(lang, page, title, description, body):
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f5f7f6" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="{url}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="{icon}">
-<link rel="apple-touch-icon" href="{icon}">{alternates}
+<meta property="og:url" content="{url}">
+<meta property="og:site_name" content="Wristalk">
+<meta property="og:locale" content="{c.OG_LOCALE}">
+<meta property="og:image" content="{SITE_URL}/assets/og-{lang}.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{c.OG_IMAGE_ALT}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="48x48" href="{rel(here, "assets/favicon-48.png")}">
+<link rel="icon" type="image/png" sizes="192x192" href="{rel(here, "assets/icon-192.png")}">
+<link rel="apple-touch-icon" href="{rel(here, "assets/apple-touch-icon.png")}">{alternates}
 <!-- Site-wide values. The support address is generated from SUPPORT_EMAIL in _build/gen_pages.py (see README.md). -->
 <script>
 const SUPPORT_EMAIL = "{SUPPORT_EMAIL}";
-const APP_STORE_URL = "{APP_STORE_URL}";
 </script>
 {HEAD_THEME}
 <style>{CSS}</style>
@@ -327,14 +377,6 @@ const APP_STORE_URL = "{APP_STORE_URL}";
     links[i].href = "mailto:" + SUPPORT_EMAIL;
     if (!links[i].hasAttribute("data-keep-text")) links[i].textContent = SUPPORT_EMAIL;
   }}
-  var badges = document.querySelectorAll("[data-appstore]");
-  for (var j = 0; j < badges.length; j++) {{
-    var b = badges[j];
-    if (/^\\[/.test(APP_STORE_URL)) {{
-      b.removeAttribute("href"); b.setAttribute("aria-disabled", "true"); b.classList.add("soon");
-      var s = b.querySelector(".small"); if (s) s.textContent = b.getAttribute("data-soon");
-    }} else {{ b.href = APP_STORE_URL; }}
-  }}
   var t = document.getElementById("theme-toggle");
   function icon() {{ t.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀" : "☾"; }}
   t.addEventListener("click", function(){{
@@ -351,15 +393,28 @@ const APP_STORE_URL = "{APP_STORE_URL}";
 """
 
 
+def shots_html(lang, kind, shots):
+    """A horizontally scrolling row of screenshots (assets/screens/<lang>/<kind>-<file>.webp, see README.md)."""
+    w, h = (168, 205) if kind == "watch" else (190, 413)
+    here = out_path(lang, "home")
+    items = "".join(
+        f'<li><figure><img src="{rel(here, f"assets/screens/{lang}/{kind}-{f}.webp")}" width="{w}" height="{h}" '
+        f'loading="lazy" decoding="async" alt="{alt}"><figcaption>{cap}</figcaption></figure></li>'
+        for f, cap, alt in shots)
+    return f'<ul class="shots {"watch" if kind == "watch" else "phone"}-shots">{items}</ul>'
+
+
 def build_home(lang):
     c = CONTENT[lang]
     h = c.HOME
+    pr = h["pricing"]
     features = "".join(
         f'<div class="card feature"><h2>{f["title"]}</h2><ul>' + "".join(f"<li>{i}</li>" for i in f["items"])
         + "</ul></div>" for f in h["features"])
     tiers = "".join(
         f'<div class="card tier"><h3><span class="badge {t["kind"]}" aria-hidden="true"></span>{t["title"]}</h3>'
         f'<p>{t["text"]}</p></div>' for t in h["tiers"])
+    hero_img = rel(out_path(lang, "home"), f"assets/screens/{lang}/watch-02-receiving.webp")
     body = f"""
 <header class="hero home-hero">
   <div class="hero-inner">
@@ -368,26 +423,38 @@ def build_home(lang):
       <h1>{h["h1"]}</h1>
       <p class="tagline">{h["tagline"]}</p>
       <div class="cta">
-        <a class="storebadge" data-appstore data-soon="{h["badge_soon"]}" href="{APP_STORE_URL}">
-          {APPLE_LOGO}<span><span class="small">{h["badge_small"]}</span><span class="big">App Store</span></span>
-        </a>
+        {store_badge(h)}
         <a class="textlink" href="%%SUPPORT%%">{h["help_link"]} →</a>
       </div>
       <p class="fineprint">{h["fineprint"]}</p>
     </div>
-    <div class="watch" role="img" aria-label="{h["watch_alt"]}">
-      <div class="who"><span class="dot"></span>{h["watch_name"]}</div>
-      <div class="ptt">{MIC}</div>
-      <div class="hint">{h["watch_hint"]}</div>
-    </div>
+    <div class="watch"><img src="{hero_img}" width="202" height="248" alt="{h["watch_alt"]}"></div>
   </div>
 </header>
 <main id="main">
   <p class="band">{h["band"]}</p>
   <div class="features">{features}</div>
+  <h2 class="section-title" id="screens">{h["shots_title"]}</h2>
+  <h3 class="shots-h">Apple Watch</h3>
+  {shots_html(lang, "watch", h["watch_shots"])}
+  <h3 class="shots-h">iPhone</h3>
+  {shots_html(lang, "iphone", h["iphone_shots"])}
   <h2 class="section-title">{h["tiers_title"]}</h2>
   <div class="tiers">{tiers}</div>
   <p class="tiers-note">{h["tiers_note"]}</p>
+  <h2 class="section-title" id="pricing">{pr["title"]}</h2>
+  <div class="card pricing">
+    <div>
+      <p class="price-plan">Family Pass</p>
+      <p class="price">{pr["price"]}<span>{pr["per"]}</span></p>
+      <span class="price-trial">{pr["trial"]}</span>
+      <p class="price-sub">{pr["sub"]}</p>
+    </div>
+    <div>
+      <ul>{"".join(f"<li>{i}</li>" for i in pr["items"])}</ul>
+      <p class="more"><a href="%%SUPPORT%%#pass">{pr["more"]} →</a></p>
+    </div>
+  </div>
   <div class="helpbox card">
     <p><strong>{h["help_title"]}</strong></p>
     <p>{h["help_text"]}</p>
