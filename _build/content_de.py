@@ -160,8 +160,8 @@ SUPPORT = {
              "<li>Eine Internetverbindung auf jeder Uhr bzw. jedem iPhone (WLAN oder Mobilfunk).</li>"
              "<li>Einen Apple Account für „Mit Apple anmelden“. Wristalk fragt weder nach E-Mail-Adresse noch "
              "nach Telefonnummer.</li></ul>"
-             "<p>Die iPhone-App ist optional: Dort verwalten Sie bequem Personen, Gruppen und die Einstellungen "
-             "der Kinder, aber alles funktioniert auch auf der Uhr.</p>"),
+             "<p>Die iPhone-App ist optional: Dort verwalten Sie bequem Personen und Gruppen, und dort legen "
+             "Verantwortliche die Einstellungen jedes Kindes fest. Alles andere funktioniert auch auf der Uhr.</p>"),
             ("Welche Apple Watch-Modelle werden unterstützt?",
              "<ul><li><strong>Live über den Lautsprecher:</strong> Apple Watch SE (3. Generation), Series 10 "
              "und neuer, Ultra 2 und neuer. Eingehende Nachrichten spielen von selbst, ohne zu tippen.</li>"
@@ -174,7 +174,8 @@ SUPPORT = {
              "<p>Nein. Die Uhren-App ist für sich vollständig und läuft auf Apple Watches mit "
              "Familienkonfiguration. Installieren Sie Wristalk auf der Uhr aus dem App Store, melden Sie sich mit "
              "dem Apple Account des Kindes an und treten Sie mit einem Einladungscode Ihrer Familie bei. Die "
-             "Einstellungen Ihres Kindes verwalten Sie auf Ihrem eigenen iPhone oder Ihrer Uhr.</p>"),
+             "Einstellungen Ihres Kindes legen Sie in Wristalk auf Ihrem iPhone fest; Freigaben funktionieren "
+             "auch auf Ihrer Uhr.</p>"),
             ("Wo ist Wristalk erhältlich?",
              "<p>Wristalk ist im App Store in den USA erhältlich. Die App gibt es auf Englisch und "
              "Deutsch.</p>"),
@@ -206,8 +207,9 @@ SUPPORT = {
              "braucht jeder neue Kontakt die Freigabe eines Verantwortlichen, sofern dieser nichts anderes "
              "erlaubt hat.</p>"),
             ("Wie verlasse oder wechsle ich die Familie?",
-             "<p>Erwachsene verlassen ihre Familie unter Einstellungen → <span class=\"kbd\">Familie "
-             "verlassen</span>, auf dem iPhone oder auf der Uhr. Um in eine andere Familie zu wechseln, nehmen "
+             "<p>Erwachsene verlassen ihre Familie auf dem iPhone unter Einstellungen → <span class=\"kbd\">"
+             "„Familienname“ verlassen …</span> oder auf der Uhr unter Einstellungen → Datenschutz → "
+             "<span class=\"kbd\">„Familienname“ verlassen</span>. Um in eine andere Familie zu wechseln, nehmen "
              "Sie eine Familieneinladung von ihr an; Wristalk fragt nach und wechselt dann für Sie.</p>"
              "<p>Haben Sie den Family Pass gekauft, geht er mit Ihnen, und die Familie, die Sie verlassen, "
              "braucht einen eigenen. Kinder können ihre Familie nicht verlassen – ein Verantwortlicher kann "

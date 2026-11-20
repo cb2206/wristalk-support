@@ -155,8 +155,8 @@ SUPPORT = {
              "<li>An internet connection on each watch or iPhone (Wi-Fi or cellular).</li>"
              "<li>An Apple Account to Sign in with Apple. Wristalk doesn't ask for an email address or "
              "phone number.</li></ul>"
-             "<p>The iPhone app is optional: it's the comfortable place to manage people, groups and kids' "
-             "settings, but everything also works on the watch.</p>"),
+             "<p>The iPhone app is optional: it's the comfortable place to manage people and groups, and "
+             "guardians set each child's settings there. Everything else also works on the watch.</p>"),
             ("Which Apple Watch models are supported?",
              "<ul><li><strong>Live through the speaker:</strong> Apple Watch SE (3rd generation), Series 10 "
              "and later, Ultra 2 and later. Incoming messages play by themselves, no tap needed.</li>"
@@ -168,8 +168,8 @@ SUPPORT = {
             ("Does my child need an iPhone?",
              "<p>No. The watch app is complete on its own and works on Apple Watch set up with Family Setup. "
              "Install Wristalk from the App Store on the watch, sign in with the child's Apple Account, and "
-             "join your family with an invite code. You manage your child's settings from your own iPhone "
-             "or watch.</p>"),
+             "join your family with an invite code. You set your child's settings in Wristalk on your "
+             "iPhone; approvals also work on your watch.</p>"),
             ("Where is Wristalk available?",
              "<p>Wristalk is available in the App Store in the United States. The app is in English and "
              "German.</p>"),
@@ -201,8 +201,9 @@ SUPPORT = {
              "children, each new contact needs a guardian's approval unless the guardian has allowed "
              "otherwise.</p>"),
             ("How do I leave or switch family?",
-             "<p>Adults can leave their family in Settings → <span class=\"kbd\">Leave family</span>, on "
-             "iPhone or on the watch. To move to another family, accept a family invite from it; Wristalk asks "
+             "<p>Adults can leave their family on iPhone under Settings → <span class=\"kbd\">Leave "
+             "“family name”…</span>, or on the watch under Settings → Privacy → <span class=\"kbd\">Leave "
+             "“family name”</span>. To move to another family, accept a family invite from it; Wristalk asks "
              "you to confirm and then switches for you.</p>"
              "<p>If you bought the Family Pass, it goes with you, and the family you leave needs its own. "
              "Children can't leave their family — a guardian can delete the child's account instead — and the "
