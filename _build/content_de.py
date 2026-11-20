@@ -408,6 +408,14 @@ beschriebenen personenbezogenen Daten. Kontakt: %%EMAIL%%.</p>
     erbringen und Missbrauch zu begrenzen (Ratenbegrenzung). Diese Einträge werden innerhalb von 2 Tagen gelöscht.
     Unser Hosting-Anbieter führt kurzlebige Anfrage-Protokolle zur Fehlersuche, die nach wenigen Tagen automatisch
     gelöscht werden. Unsere Server-Protokolle enthalten keine Sprachinhalte.</li>
+  <li><strong>Diagnoseprotokolle.</strong> Nur wenn Sie auf Einstellungen → Hilfe → Diagnoseprotokoll senden tippen
+    und mit Senden bestätigen, schickt die App das technische Protokoll dieses Geräts an uns, damit wir ein Problem
+    beheben können. Es hält fest, was die App wann getan hat (zum Beispiel App-Starts, Beginn und Ende von
+    Gesprächen, Verbindungswechsel, geänderte Einstellungen und Fehlercodes), mit Ihrer Nutzer-ID, Geräte-ID,
+    Familien- und Gesprächs-IDs, dem Gerätemodell sowie der Betriebssystem- und App-Version. Es enthält keine Namen,
+    keine Sprache, keine Nachrichteninhalte, keine Einladungscodes und keine Schlüssel. Nur wir lesen es, um das
+    Problem zu untersuchen; Sie erhalten eine Referenz, die Sie angeben, wenn Sie uns schreiben. Es wird nach 30
+    Tagen gelöscht oder sofort, wenn Sie Ihr Konto löschen.</li>
 </ul>
 
 <h2>3. Was wir nicht sehen können</h2>
@@ -426,7 +434,7 @@ beteiligt waren, hören sie nie.</p>
 <p>Wristalk enthält keine Werbung, keine Analyse-Tools und keine Tracking-SDKs von Drittanbietern. Wir verkaufen Ihre
 Daten nicht, geben sie nicht für Werbezwecke weiter und erstellen keine Profile über Sie. Die App führt auf Ihrem
 Gerät ein technisches Protokoll (ohne Sprache oder Nachrichteninhalte); es verlässt Ihr Gerät nur, wenn Sie es selbst
-teilen, zum Beispiel mit uns für den Support.</p>
+senden oder teilen, zum Beispiel an uns für den Support (Abschnitt 2, Diagnoseprotokolle).</p>
 
 <h2>5. Dienstleister</h2>
 <ul>
@@ -445,6 +453,7 @@ unser Support-Postfach %%EMAIL%%. Unser E-Mail-Anbieter erhält diese E-Mails un
   <li>Verschlüsselte Sprachnachrichten: bis alle sie abgespielt haben, höchstens 10 Minuten (oder gemäß Einstellung
     des Gesprächs, höchstens 24 Stunden).</li>
   <li>Gesprächs-Metadaten: 30 Tage.</li>
+  <li>Diagnoseprotokolle, die Sie uns senden: 30 Tage.</li>
   <li>Meldungen: 90 Tage.</li>
   <li>Einladungscodes: 7 Tage nach Ablauf oder Verwendung gelöscht.</li>
   <li>Abo-Daten: solange Ihre Familie besteht; Apples Benachrichtigungen dazu 30 Tage.</li>
@@ -466,10 +475,14 @@ in Abschnitt 5 nicht an Dritte weiter. Nichts, was ein Kind sagt, können wir h�
 → das Kind), die weitere Erhebung beenden und alle Daten des Kindes jederzeit löschen (Kinder → das Kind → Alle Daten
 löschen) oder uns per E-Mail an %%EMAIL%% darum bitten. Erfahren wir, dass ein Kind unter 13 Jahren Wristalk ohne
 verantwortliche Person in seiner Familie nutzt, löschen wir das Konto.</p>
+<p>Ein Kind kann ein Diagnoseprotokoll (Abschnitt 2) genauso senden wie Erwachsene, nach derselben Bestätigung. Die
+verantwortlichen Personen des Kindes werden jedes Mal benachrichtigt. Wir nutzen das Protokoll eines Kindes nur, um
+das Problem zu beheben, für das es gesendet wurde.</p>
 
 <h2>8. Rechtsgrundlagen (EWR, Vereinigtes Königreich und Schweiz)</h2>
 <p>Wir verarbeiten Ihre Daten, um Wristalk im Rahmen unseres Vertrags mit Ihnen bereitzustellen (Art. 6 Abs. 1 lit. b
-DSGVO), um Wristalk sicher zu halten und Meldungen über Missbrauch zu bearbeiten (berechtigte Interessen, Art. 6
+DSGVO), um Wristalk sicher zu halten, Meldungen über Missbrauch zu bearbeiten und Probleme anhand von
+Diagnoseprotokollen zu untersuchen, die Sie uns senden (berechtigte Interessen, Art. 6
 Abs. 1 lit. f DSGVO) und um rechtliche Pflichten zu erfüllen (Art. 6 Abs. 1 lit. c DSGVO). Kinder unter dem in ihrem
 Land geltenden Mindestalter für die Einwilligung nutzen Wristalk mit Einwilligung und unter Aufsicht ihrer Eltern
 bzw. Verantwortlichen.</p>

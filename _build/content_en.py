@@ -380,6 +380,13 @@ described here. Contact: %%EMAIL%%.</p>
     service and limit abuse (rate limiting). Rate-limit records are deleted within 2 days. Our hosting provider keeps
     short-lived request logs for troubleshooting, which are deleted automatically after a few days. Our server logs
     contain no voice content.</li>
+  <li><strong>Diagnostic logs.</strong> Only if you tap Settings → Help → Send diagnostic log and confirm with Send,
+    the app sends this device's technical log to us to help fix a problem. It records what the app did and when (for
+    example app launches, talks started and ended, connection changes, settings changes and error codes), with your
+    user ID, device ID, family and conversation IDs, the device model, the operating-system version and the app
+    version. It contains no names, no voice, no message content, no invite codes and no keys. Only we read it, to
+    investigate the problem; you get a reference to quote when you write to us. It is deleted after 30 days, or right
+    away when you delete your account.</li>
 </ul>
 
 <h2>3. What we cannot see</h2>
@@ -396,7 +403,8 @@ of.</p>
 <h2>4. No tracking, ads or analytics</h2>
 <p>Wristalk contains no advertising, no analytics and no third-party tracking SDKs. We do not sell or share your data
 for advertising, and we do not build profiles about you. The app keeps a technical log on your device (without voice
-or message content); it only leaves your device if you choose to share it, for example with us for support.</p>
+or message content); it only leaves your device if you choose to send or share it, for example with us for support
+(section 2, Diagnostic logs).</p>
 
 <h2>5. Service providers</h2>
 <ul>
@@ -415,6 +423,7 @@ mailbox, %%EMAIL%%. Our email provider receives these emails and the messages yo
   <li>Encrypted voice messages: until played by everyone, at most 10 minutes (or the conversation's setting, at most
     24 hours).</li>
   <li>Talk metadata: 30 days.</li>
+  <li>Diagnostic logs you send us: 30 days.</li>
   <li>Reports: 90 days.</li>
   <li>Invite codes: deleted 7 days after they expire or are used.</li>
   <li>Subscription records: as long as your family exists; Apple's notifications about them, 30 days.</li>
@@ -436,10 +445,12 @@ section 5. Nothing a child says can be heard by us.</p>
 further collection and delete all of the child's data at any time (Kids → the child → Delete all of the child's
 data), or ask us by email at %%EMAIL%%. If we learn that a child under 13 uses Wristalk without a guardian in their
 family, we delete the account.</p>
+<p>A child can send a diagnostic log (section 2) the same way as an adult, after the same confirmation. The child's
+guardians are notified each time. We use a child's log only to fix the problem it was sent for.</p>
 
 <h2>8. Legal bases (EEA, UK and Switzerland)</h2>
-<p>We process your data to provide Wristalk under our contract with you (Art. 6(1)(b) GDPR), to keep Wristalk safe and
-handle abuse reports (legitimate interests, Art. 6(1)(f) GDPR), and to meet legal obligations (Art. 6(1)(c) GDPR).
+<p>We process your data to provide Wristalk under our contract with you (Art. 6(1)(b) GDPR), to keep Wristalk safe, handle abuse
+reports and investigate problems from diagnostic logs you send us (legitimate interests, Art. 6(1)(f) GDPR), and to meet legal obligations (Art. 6(1)(c) GDPR).
 For children below the age of digital consent in their country, Wristalk is used with the consent and under the
 control of their parent or guardian.</p>
 
