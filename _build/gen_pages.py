@@ -33,7 +33,7 @@ COMPANY_ADDRESS = "1500 N Grant St, Ste #10470, Denver, CO 80203, USA"
 # Governing law and venue, as it reads inside a sentence in each language.
 JURISDICTION = {"en": "the State of Colorado, USA", "de": "des Bundesstaats Colorado, USA"}
 # Effective date of the privacy policy and terms (set when a new version is published), per language.
-EFFECTIVE = {"en": "October 28, 2026", "de": "28. Oktober 2026"}
+EFFECTIVE = {"en": "November 26, 2026", "de": "26. November 2026"}
 
 LANGS = {"en": "", "de": "de/"}              # language -> folder prefix
 PAGES = {"home": "index.html", "support": "support/index.html",
